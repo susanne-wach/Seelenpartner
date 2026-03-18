@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deine Kurse | Susanne Wachter – Seelenpartner-Begleitung</title>
+  <meta name="description" content="Online-Kurse & E-Books von Susanne Wachter für Frauen in Seelenpartnerprozessen. Tiefgehende energetische Begleitung – wann du willst, so oft du willst." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://susanne-wachter.at/kurse.html" />
+  <meta property="og:title" content="Deine Kurse | Susanne Wachter" />
+  <meta property="og:description" content="Kurse & E-Books für Frauen in Seelenpartnerprozessen. Energetische Tiefe – sofort verfügbar." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --magenta:    #DD3089;
+      --gold-light: #F7DE7A;
+      --gold:       #CFAC5E;
+      --white:      #FFFFFF;
+      --dark:       #3A2E3D;
+      --blush:      #EAD1D7;
+      --sand:       #F9F5EE;
+      --body-text:  #4A3F4E;
+      --muted:      #7E6B84;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --radius:     12px;
+      --radius-lg:  24px;
+      --shadow:     0 4px 32px rgba(58,46,61,.10);
+      --shadow-lg:  0 16px 64px rgba(58,46,61,.18);
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-sans); color: var(--body-text); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── GOLD GLOW ── */
+    .gold-text {
+      background: linear-gradient(120deg,#FFE57A 0%,#F0C040 18%,#CFAC5E 35%,#FFE28A 50%,#D4A030 68%,#F7DE7A 82%,#FFE57A 100%);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 6px rgba(255,220,80,.75)) drop-shadow(0 0 18px rgba(207,172,94,.55));
+      animation: goldFlow 6s linear infinite;
+      display: inline;
+      font-style: italic;
+    }
+    @keyframes goldFlow { 0%{background-position:0% center} 100%{background-position:300% center} }
+
+    /* ── SCROLL PROGRESS ── */
+    .scroll-progress {
+      position: fixed; top:0; left:0; height:2.5px; width:0%;
+      background: linear-gradient(90deg,var(--magenta),#F7DE7A,var(--gold));
+      z-index:999; box-shadow:0 0 10px rgba(221,48,137,.5);
+      transition:width .08s linear;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top:0; left:0; right:0; z-index:100;
+      padding: 18px 0;
+      background: rgba(249,245,238,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+    .nav.scrolled {
+      padding: 12px 0;
+      background: rgba(249,245,238,0.96);
+      border-bottom-color: rgba(234,209,215,.5);
+      box-shadow: 0 2px 24px rgba(58,46,61,.08);
+    }
+    .nav .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .nav__inner { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .nav__logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .nav__logo-name { font-family:var(--font-serif); font-size:1.25rem; font-weight:500; color:var(--dark); letter-spacing:.01em; }
+    .nav__logo-tagline { font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
+    .nav__links { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nav__links a { font-size:.88rem; font-weight:400; color:var(--body-text); letter-spacing:.02em; transition:color .2s; }
+    .nav__links a:hover { color:var(--magenta); }
+    .nav__links a.active { color:var(--magenta); font-weight:500; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 28px; border-radius:60px; font-family:var(--font-sans); font-size:.95rem; font-weight:500; letter-spacing:.03em; cursor:pointer; border:none; text-decoration:none; transition:var(--transition); }
+    .btn--primary { background:var(--magenta); color:#fff; box-shadow:0 4px 20px rgba(221,48,137,.3); }
+    .btn--primary:hover { background:#C4256E; box-shadow:0 8px 32px rgba(221,48,137,.45); transform:translateY(-2px); }
+    .btn--gold-outline { background:transparent; border:2px solid var(--gold); color:var(--gold); font-weight:600; }
+    .btn--gold-outline:hover { background:var(--gold); color:var(--dark); }
+    .nav__hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .nav__hamburger span { display:block; width:24px; height:1.5px; background:var(--dark); border-radius:2px; transition:var(--transition); }
+    @media(max-width:900px){ .nav__links,.nav__ctas { display:none; } .nav__hamburger { display:flex; } }
+
+    /* ── HERO ── */
+    .page-hero {
+      min-height: 52vh;
+      background: linear-gradient(160deg, var(--sand) 0%, #EAD1D7 50%, var(--sand) 100%);
+      display: flex; align-items: center;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero__orb {
+      position: absolute; border-radius:50%; pointer-events:none;
+    }
+    .page-hero__orb--1 {
+      width:500px; height:500px; top:-150px; right:-100px;
+      background:radial-gradient(circle,rgba(221,48,137,.1) 0%,transparent 70%);
+      animation: orbDrift1 14s ease-in-out infinite;
+    }
+    .page-hero__orb--2 {
+      width:300px; height:300px; bottom:-80px; left:-60px;
+      background:radial-gradient(circle,rgba(207,172,94,.12) 0%,transparent 70%);
+      animation: orbDrift2 18s ease-in-out infinite;
+    }
+    @keyframes orbDrift1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-30px,50px) scale(1.08)} 66%{transform:translate(20px,-30px) scale(.94)} }
+    @keyframes orbDrift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-30px) scale(1.1)} }
+    .page-hero .container { max-width:1160px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+    .page-hero__label {
+      font-size:.72rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--muted); margin-bottom:20px; display:flex; align-items:center; gap:8px;
+    }
+    .page-hero__label::before { content:''; width:24px; height:1.5px; background:var(--magenta); }
+    .page-hero__title {
+      font-family:var(--font-serif); font-size:clamp(2.8rem,6vw,5rem);
+      font-weight:400; line-height:1.12; color:var(--dark); margin-bottom:24px;
+    }
+    .page-hero__sub {
+      font-size:1.15rem; line-height:1.8; color:var(--body-text);
+      max-width:580px; margin-bottom:0;
+    }
+
+    /* ── WAVE ── */
+    .wave { line-height:0; overflow:hidden; }
+    .wave svg { display:block; width:100%; }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      background: var(--white);
+      padding: 32px 0 0;
+    }
+    .filter-bar__inner {
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+    }
+    .filter-btn {
+      padding:10px 22px; border-radius:60px; border:1.5px solid rgba(207,172,94,.4);
+      background:transparent; cursor:pointer; font-family:var(--font-sans);
+      font-size:.85rem; font-weight:500; color:var(--muted); transition:var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background:var(--dark); color:var(--white); border-color:var(--dark);
+    }
+    .filter-btn.active-gold {
+      background: linear-gradient(120deg,#F7DE7A,#CFAC5E);
+      color:var(--dark); border-color:transparent;
+    }
+
+    /* ── COURSES GRID ── */
+    .courses-section {
+      background: var(--white);
+      padding: 60px 0 100px;
+    }
+    .courses-section .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    /* ── COURSE CARD ── */
+    .course-card {
+      background: var(--white);
+      border: 1px solid rgba(234,209,215,.6);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex; flex-direction: column;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(221,48,137,.2);
+    }
+    .course-card--featured {
+      border-color: rgba(207,172,94,.5);
+      background: linear-gradient(160deg, #FFFDF5 0%, var(--white) 100%);
+    }
+    .course-card--featured::before {
+      content: '✦ Empfohlen';
+      position: absolute; top:16px; right:16px;
+      font-size:.65rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+      background: linear-gradient(120deg,#F7DE7A,#CFAC5E);
+      color: var(--dark); padding:5px 14px; border-radius:60px;
+    }
+    .course-card__badge {
+      position:absolute; top:16px; left:16px;
+      font-size:.62rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+      background:rgba(221,48,137,.1); color:var(--magenta);
+      padding:5px 12px; border-radius:60px; border:1px solid rgba(221,48,137,.2);
+    }
+    .course-card__visual {
+      height: 180px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      font-size: 4rem;
+    }
+    .course-card__visual--1 { background: linear-gradient(135deg,#EAD1D7 0%,#F9F5EE 100%); }
+    .course-card__visual--2 { background: linear-gradient(135deg,#3A2E3D 0%,#5A4A5E 100%); }
+    .course-card__visual--3 { background: linear-gradient(135deg,#EAD1D7 0%,#D4B5C0 100%); }
+    .course-card__visual--4 { background: linear-gradient(135deg,#F9F5EE 0%,#F0E8D8 100%); }
+    .course-card__visual--5 { background: linear-gradient(135deg,#3A2E3D 0%,#4A3F4E 100%); }
+    .course-card__visual--6 { background: linear-gradient(135deg,#CFAC5E22 0%,#F7DE7A33 100%); border-bottom:1px solid rgba(207,172,94,.2); }
+    .course-card__visual--7 { background: linear-gradient(135deg,#DD308922 0%,#EAD1D7 100%); }
+    .course-card__visual--8 { background: linear-gradient(135deg,#3A2E3D 0%,#DD308933 100%); }
+    .course-card__visual-glow {
+      position:absolute; inset:0;
+      background:radial-gradient(circle at center, rgba(255,255,255,.15) 0%, transparent 70%);
+    }
+    .course-card__body {
+      padding: 28px 28px 24px;
+      flex: 1; display:flex; flex-direction:column;
+    }
+    .course-card__type {
+      font-size:.68rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--muted); margin-bottom:10px;
+    }
+    .course-card__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem,2vw,1.5rem);
+      font-weight: 400; line-height: 1.3;
+      color: var(--dark); margin-bottom:14px;
+    }
+    .course-card__desc {
+      font-size:.93rem; line-height:1.75; color:var(--body-text);
+      flex:1; margin-bottom:24px;
+    }
+    .course-card__meta {
+      display:flex; align-items:center; gap:12px;
+      margin-bottom:20px; flex-wrap:wrap;
+    }
+    .course-card__tag {
+      font-size:.7rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
+      background:var(--sand); color:var(--muted); padding:4px 12px; border-radius:60px;
+    }
+    .course-card__cta {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:100%; padding:14px 24px; border-radius:60px;
+      background: var(--magenta); color:#fff;
+      font-family:var(--font-sans); font-size:.92rem; font-weight:500;
+      letter-spacing:.03em; text-decoration:none;
+      transition:var(--transition); border:none; cursor:pointer;
+      box-shadow:0 4px 20px rgba(221,48,137,.25);
+      position:relative; overflow:hidden;
+    }
+    .course-card__cta::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);
+      transform:translateX(-100%); transition:transform .5s ease;
+    }
+    .course-card__cta:hover { background:#C4256E; transform:translateY(-2px); box-shadow:0 8px 32px rgba(221,48,137,.4); }
+    .course-card__cta:hover::after { transform:translateX(100%); }
+    .course-card--ebook .course-card__cta {
+      background: linear-gradient(120deg,#CFAC5E,#F7DE7A,#CFAC5E);
+      background-size:200% auto; color:var(--dark);
+      box-shadow:0 4px 20px rgba(207,172,94,.3);
+      animation:goldFlow 4s linear infinite;
+    }
+    .course-card--ebook .course-card__cta:hover { box-shadow:0 8px 32px rgba(207,172,94,.5); color:var(--dark); }
+
+    /* ── SECTION DIVIDER ── */
+    .section-label {
+      display:flex; align-items:center; gap:16px;
+      margin-bottom:12px;
+    }
+    .section-label::before, .section-label::after {
+      content:''; flex:1; height:1px; background:rgba(234,209,215,.8);
+    }
+    .section-label span {
+      font-size:.72rem; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--muted); white-space:nowrap;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--dark);
+      padding: 64px 0;
+    }
+    .trust-bar .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .trust-bar__inner {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:40px;
+      text-align:center;
+    }
+    .trust-bar__item-num {
+      font-family:var(--font-serif); font-size:3.5rem; font-weight:300;
+      line-height:1; margin-bottom:8px;
+    }
+    .trust-bar__item-label {
+      font-size:.85rem; color:rgba(255,255,255,.6); letter-spacing:.06em;
+    }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--dark) 0%, #4A3550 100%);
+      padding: 80px 0;
+      text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .cta-strip::before {
+      content:'';
+      position:absolute; inset:0;
+      background:radial-gradient(ellipse at 50% 0%,rgba(221,48,137,.15) 0%,transparent 60%);
+    }
+    .cta-strip .container { max-width:700px; margin:0 auto; padding:0 24px; position:relative; }
+    .cta-strip__title {
+      font-family:var(--font-serif); font-size:clamp(2rem,4vw,3rem);
+      font-weight:400; color:#fff; line-height:1.25; margin-bottom:20px;
+    }
+    .cta-strip__text {
+      font-size:1.05rem; color:rgba(255,255,255,.7); line-height:1.8; margin-bottom:36px;
+    }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal-up {
+      opacity:0; transform:translateY(28px);
+      transition:opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-up.visible { opacity:1; transform:translateY(0); }
+    .reveal-up[data-delay="1"]{transition-delay:.1s}
+    .reveal-up[data-delay="2"]{transition-delay:.2s}
+    .reveal-up[data-delay="3"]{transition-delay:.3s}
+    .reveal-up[data-delay="4"]{transition-delay:.4s}
+    .reveal-up[data-delay="5"]{transition-delay:.5s}
+    .reveal-up[data-delay="6"]{transition-delay:.6s}
+    .reveal-up[data-delay="7"]{transition-delay:.7s}
+    .reveal-up[data-delay="8"]{transition-delay:.8s}
+
+    /* ── FOOTER ── */
+    .footer {
+      background:var(--dark); color:rgba(255,255,255,.75); padding:60px 0 32px;
+      border-top:1px solid rgba(255,255,255,.07);
+    }
+    .footer .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .footer__inner { display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; align-items:flex-start; margin-bottom:48px; }
+    .footer__brand-name { font-family:var(--font-serif); font-size:1.4rem; color:#fff; margin-bottom:8px; }
+    .footer__tagline { font-size:.85rem; line-height:1.7; color:rgba(255,255,255,.5); max-width:320px; }
+    .footer__links { display:flex; flex-wrap:wrap; gap:12px 24px; }
+    .footer__links a { font-size:.82rem; color:rgba(255,255,255,.5); text-decoration:none; transition:color .2s; }
+    .footer__links a:hover { color:#fff; }
+    .footer__bottom { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:.78rem; color:rgba(255,255,255,.35); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:768px) {
+      .courses-grid { grid-template-columns:1fr; }
+      .trust-bar__inner { grid-template-columns:1fr; gap:28px; }
+      .filter-bar__inner { gap:8px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Startseite">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#DD3089"/><stop offset="100%" stop-color="#CFAC5E"/>
+              </linearGradient>
+              <linearGradient id="lgf" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#DD3089" stop-opacity=".12"/><stop offset="100%" stop-color="#CFAC5E" stop-opacity=".12"/>
+              </linearGradient>
+            </defs>
+            <circle cx="14" cy="19" r="11.5" stroke="url(#lg)" stroke-width="1.2"/>
+            <circle cx="24" cy="19" r="11.5" stroke="url(#lg)" stroke-width="1.2"/>
+            <path d="M19 9.2 C22.4 11.8 24.8 15.2 24.8 19 C24.8 22.8 22.4 26.2 19 28.8 C15.6 26.2 13.2 22.8 13.2 19 C13.2 15.2 15.6 11.8 19 9.2Z" fill="url(#lgf)"/>
+            <circle cx="19" cy="19" r="2" fill="url(#lg)"/>
+          </svg>
+          <div>
+            <span class="nav__logo-name">Susanne Wachter</span>
+            <span class="nav__logo-tagline">Seelenpartner-Begleitung</span>
+          </div>
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+          <li><a href="index.html#angebote">1:1 Sitzung</a></li>
+          <li><a href="index.html#stimmen">Stimmen</a></li>
+          <li><a href="kurse.html" class="active">Deine Kurse</a></li>
+        </ul>
+
+        <div style="display:flex;align-items:center;gap:10px;">
+          <a href="kurse.html"
+             class="btn btn--gold-outline"
+             style="font-size:.88rem!important;padding:10px 20px!important;font-weight:600;">
+            ✦ Deine Kurse
+          </a>
+          <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary"
+             style="font-size:.88rem!important;padding:10px 20px!important;">
+            Sitzung buchen
+          </a>
+        </div>
+
+        <button class="nav__hamburger" aria-label="Menü öffnen" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display:none;position:fixed;inset:0;background:rgba(58,46,61,.97);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
+    <button onclick="toggleMenu()" style="position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">✕</button>
+    <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Startseite</a>
+    <a href="index.html#angebote" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">1:1 Sitzung</a>
+    <a href="kurse.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Deine Kurse</a>
+    <a href="index.html#stimmen" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Stimmen</a>
+    <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" style="margin-top:12px;background:#DD3089;color:#fff;padding:16px 36px;border-radius:60px;font-size:1rem;">Sitzung buchen</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <header class="page-hero" aria-labelledby="kurse-title">
+    <div class="page-hero__orb page-hero__orb--1" aria-hidden="true"></div>
+    <div class="page-hero__orb page-hero__orb--2" aria-hidden="true"></div>
+    <div class="container">
+      <p class="page-hero__label">Susanne Wachter · Seelenpartner-Begleitung</p>
+      <h1 class="page-hero__title" id="kurse-title">
+        Tiefe, die du<br>
+        <span class="gold-text">selbst bestimmst.</span>
+      </h1>
+      <p class="page-hero__sub">
+        Kurse und E-Books, die du in deinem eigenen Tempo gehst —
+        wenn du sie brauchst, so oft du willst.
+        Energetische Arbeit, die nicht wartet, bis du bereit bist.
+        Sie trifft dich genau da, wo du gerade bist.
+      </p>
+    </div>
+  </header>
+
+  <!-- Wave -->
+  <div class="wave" style="background:var(--sand);" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60">
+      <path d="M0,60 C480,0 960,60 1440,0 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ── KURSE ── -->
+  <main>
+  <section class="courses-section" aria-labelledby="kurse-section-title">
+    <div class="container">
+
+      <!-- LABEL -->
+      <div class="section-label" aria-hidden="true">
+        <span>Online-Kurse</span>
+      </div>
+      <h2 id="kurse-section-title" style="font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;color:var(--dark);margin-bottom:6px;">
+        Energetische Begleitung — <span class="gold-text">in deinem Tempo</span>
+      </h2>
+      <p style="color:var(--muted);font-size:.95rem;margin-bottom:0;max-width:560px;">
+        Jeder Kurs trägt dich an einem bestimmten Punkt. Hör auf dein Herz — welcher spricht dich gerade an?
+      </p>
+
+      <!-- COURSES GRID -->
+      <div class="courses-grid" role="list">
+
+        <!-- Kurs 1 -->
+        <article class="course-card course-card--featured reveal-up" role="listitem" data-delay="1">
+          <div class="course-card__visual course-card__visual--1">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">🌀</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Online-Kurs</p>
+            <h3 class="course-card__title">Je näher du kommst, desto weiter entfernt er sich</h3>
+            <p class="course-card__desc">
+              Du machst alles richtig. Und genau dann — zieht er sich zurück.<br><br>
+              Kein Fehler. Kein Zufall. Eine Dynamik, die du verstehen wirst — und die sich verändert, sobald du es tust.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">E-Book · 15 Kapitel</span>
+              <span class="course-card__tag">Sofort-Download</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/je-naeher-du-kommst/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 2 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="2">
+          <div class="course-card__visual course-card__visual--2">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">🛑</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Online-Kurs</p>
+            <h3 class="course-card__title">HALT. Der innere Notfallknopf</h3>
+            <p class="course-card__desc">
+              Dein Nervensystem übernimmt. Du reagierst, bevor du denkst. Dieser Kurs gibt dir genau in diesem Moment einen Anker — keinen Ratschlag. Einen Halt, der aus dir kommt.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">Online-Kurs</span>
+              <span class="course-card__tag">Sofort verfügbar</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/halt/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 3 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="3">
+          <div class="course-card__visual course-card__visual--3">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">💔</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Online-Kurs</p>
+            <h3 class="course-card__title">Warum sein Rückzug dich innerlich aus der Bahn wirft</h3>
+            <p class="course-card__desc">
+              Er geht auf Abstand — und dein ganzer Boden bricht weg. Nicht weil du schwach bist. Weil da etwas aktiviert wird, das älter ist als diese Beziehung. Dieser Kurs zeigt dir, was das ist.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">Online-Kurs</span>
+              <span class="course-card__tag">Sofort verfügbar</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/warum-rckzug-dich-aus-der-bahn-wirft/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 4 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="4">
+          <div class="course-card__visual course-card__visual--4">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">🧭</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Online-Kurs</p>
+            <h3 class="course-card__title">HerzErinnerung – Dein Kompass für innere Ruhe & Selbstführung</h3>
+            <p class="course-card__desc">
+              Wenn du nicht mehr weißt, wo oben und unten ist — kehre zurück zu dem, was in dir ruhig ist. HerzErinnerung ist kein Kurs. Es ist eine Rückkehr zu dir selbst.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">Online-Kurs</span>
+              <span class="course-card__tag">Meditation & Energie</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/herzerinnerung/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 5 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="5">
+          <div class="course-card__visual course-card__visual--5">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">⚡</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Online-Kurs</p>
+            <h3 class="course-card__title">Warum zieht er sich zurück? Das energetische Beziehungscode-Update</h3>
+            <p class="course-card__desc">
+              Sein Rückzug ist kein Urteil über dich. Er ist ein Code — der gelesen werden will. Dieses Update entschlüsselt, was hinter der Dynamik steckt, und wie du dein Feld veränderst.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">Online-Kurs</span>
+              <span class="course-card__tag">Energiearbeit</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/warum-zieht-er-sich-zurueck/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 7 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="6">
+          <div class="course-card__visual course-card__visual--7">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">✨</span>
+          </div>
+          <div class="course-card__badge">Beliebt</div>
+          <div class="course-card__body">
+            <p class="course-card__type">3-Tages-Challenge</p>
+            <h3 class="course-card__title">Seelenpartner-Magie</h3>
+            <p class="course-card__desc">
+              Drei Tage. Drei Schichten. Eine Verbindung, die du neu siehst. Die Challenge nimmt dich tief in das Feld, das euch verbindet — und zeigt dir, was du von dort aus verändern kannst.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">3-Tage-Format</span>
+              <span class="course-card__tag">Intensiv</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/landingpage-3-tage-seelenpartner-magie/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 8 -->
+        <article class="course-card reveal-up" role="listitem" data-delay="7">
+          <div class="course-card__visual course-card__visual--8">
+            <div class="course-card__visual-glow"></div>
+            <span aria-hidden="true">🌹</span>
+          </div>
+          <div class="course-card__body">
+            <p class="course-card__type">Transformations-Programm</p>
+            <h3 class="course-card__title">Verbinde dich mit deinem Seelenpartner: Deine transformative Reise zur Quelle der Liebe</h3>
+            <p class="course-card__desc">
+              Dies ist kein Kurs. Es ist eine Reise — zur Wurzel der Verbindung. Zur Quelle, aus der echte Liebe fließt. Für dich, die spürt, dass es hier um mehr geht als eine Beziehung.
+            </p>
+            <div class="course-card__meta">
+              <span class="course-card__tag">Transformation</span>
+              <span class="course-card__tag">Tiefenarbeit</span>
+            </div>
+            <a href="https://your-balance.thrivecart.com/seelenpartner-quelle-der-liebe/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+              Jetzt ansehen →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- E-BOOKS SECTION -->
+      <div style="margin-top:80px;">
+        <div class="section-label" aria-hidden="true">
+          <span>E-Books</span>
+        </div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;color:var(--dark);margin-bottom:6px;">
+          Lesen, das <span class="gold-text">bewegt.</span>
+        </h2>
+        <p style="color:var(--muted);font-size:.95rem;margin-bottom:0;max-width:520px;">
+          Worte, die nicht erklären — sondern treffen. Für die Momente, in denen du Stille brauchst und trotzdem nicht allein sein willst.
+        </p>
+
+        <div class="courses-grid" role="list" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))">
+
+          <!-- E-Book 1 (bereits oben als Kurs 1 gezeigt, hier als Buchformat) -->
+          <article class="course-card course-card--ebook reveal-up" role="listitem" data-delay="1" style="border-color:rgba(207,172,94,.35);background:linear-gradient(160deg,#FFFDF5,#fff);">
+            <div class="course-card__visual course-card__visual--6">
+              <div class="course-card__visual-glow"></div>
+              <span aria-hidden="true" style="font-size:3.5rem;">📖</span>
+            </div>
+            <div class="course-card__body">
+              <p class="course-card__type" style="color:var(--gold);">E-Book · 15 Kapitel</p>
+              <h3 class="course-card__title">Je näher du kommst, desto weiter entfernt er sich</h3>
+              <p class="course-card__desc">
+                Das Buch, das du dir wünschtest, schon früher gelesen zu haben. Kein Ratgeber. Kein 5-Schritte-Plan. Eine ehrliche, tiefgehende Erklärung der Energie zwischen euch.
+              </p>
+              <div class="course-card__meta">
+                <span class="course-card__tag">Sofort-Download</span>
+                <span class="course-card__tag">15 Kapitel</span>
+              </div>
+              <a href="https://your-balance.thrivecart.com/je-naeher-du-kommst/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+                Jetzt herunterladen →
+              </a>
+            </div>
+          </article>
+
+          <!-- E-Book 2: SoulLove -->
+          <article class="course-card course-card--ebook reveal-up" role="listitem" data-delay="2" style="border-color:rgba(207,172,94,.35);background:linear-gradient(160deg,#FFFDF5,#fff);">
+            <div class="course-card__visual course-card__visual--6">
+              <div class="course-card__visual-glow"></div>
+              <span aria-hidden="true" style="font-size:3.5rem;">💛</span>
+            </div>
+            <div class="course-card__body">
+              <p class="course-card__type" style="color:var(--gold);">E-Book</p>
+              <h3 class="course-card__title">SoulLove – Die neue Sprache der Liebe</h3>
+              <p class="course-card__desc">
+                Liebe hat eine Frequenz. Wenn du sie sprichst, verändert sich alles — in dir, und im Feld zwischen euch. SoulLove ist keine Anleitung. Es ist eine Rückerinnerung.
+              </p>
+              <div class="course-card__meta">
+                <span class="course-card__tag">E-Book</span>
+                <span class="course-card__tag">Sofort-Download</span>
+              </div>
+              <a href="https://your-balance.thrivecart.com/soullove-buch/" target="_blank" rel="noopener noreferrer" class="course-card__cta">
+                Jetzt herunterladen →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ── -->
+  <div class="wave" style="background:var(--white);" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60">
+      <path d="M0,0 C360,60 1080,0 1440,60 L1440,60 L0,60 Z" fill="#3A2E3D"/>
+    </svg>
+  </div>
+  <section class="trust-bar" aria-label="Vertrauen & Erfahrung">
+    <div class="container">
+      <div class="trust-bar__inner">
+        <div class="reveal-up" data-delay="1">
+          <p class="trust-bar__item-num" style="color:#F7DE7A;">100+</p>
+          <p class="trust-bar__item-label">Frauen begleitet</p>
+        </div>
+        <div class="reveal-up" data-delay="2">
+          <p class="trust-bar__item-num" style="color:#F7DE7A;">8</p>
+          <p class="trust-bar__item-label">Kurse & E-Books</p>
+        </div>
+        <div class="reveal-up" data-delay="3">
+          <p class="trust-bar__item-num" style="color:#F7DE7A;">5★</p>
+          <p class="trust-bar__item-label">auf Trustpilot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wave" style="background:#3A2E3D;" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60">
+      <path d="M0,60 C720,0 1440,60 1440,60 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- ── CTA STRIP ── -->
+  <section class="cta-strip" aria-labelledby="cta-strip-title">
+    <div class="container">
+      <h2 class="cta-strip__title" id="cta-strip-title">
+        Lieber persönlich?<br>
+        <span class="gold-text">Eine Stunde. Nur für dich.</span>
+      </h2>
+      <p class="cta-strip__text">
+        Die Kurse geben dir Tiefe — die 1:1 Sitzung gibt dir Spiegel.<br>
+        Ich sehe, wo es steckt. Wir lösen es gemeinsam.
+      </p>
+      <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--primary"
+         style="font-size:1.05rem;padding:18px 44px;box-shadow:0 4px 32px rgba(221,48,137,.4);">
+        Jetzt Sitzung buchen
+      </a>
+      <p style="margin-top:16px;font-size:.82rem;color:rgba(255,255,255,.4);">
+        Online · 60 Minuten · D-A-CH
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Susanne Wachter</p>
+          <p class="footer__tagline">
+            Energetische Begleitung für Frauen in Seelenpartnerprozessen.<br>
+            Wahrheit vor Komfort. Herz vor Ego. Klarheit vor Drama.
+          </p>
+        </div>
+        <nav class="footer__links" aria-label="Footer Navigation">
+          <a href="index.html">Startseite</a>
+          <a href="index.html#ueber-mich">Über mich</a>
+          <a href="index.html#angebote">Angebote</a>
+          <a href="index.html#stimmen">Stimmen</a>
+          <a href="https://at.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener">Trustpilot</a>
+          <a href="https://your-balance.at/impressum/" target="_blank" rel="noopener">Impressum</a>
+          <a href="https://your-balance.at/datenschutzerklarung/" target="_blank" rel="noopener">Datenschutz</a>
+          <a href="https://your-balance.at/agb/" target="_blank" rel="noopener">AGB</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Susanne Wachter · susanne-wachter.at · Alle Rechte vorbehalten.</p>
+        <p>🇦🇹 Österreich &nbsp;·&nbsp; 🇩🇪 Deutschland &nbsp;·&nbsp; 🇨🇭 Schweiz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll progress
+    const bar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (total > 0 ? window.scrollY / total * 100 : 0) + '%';
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile menu
+    function toggleMenu() {
+      const m = document.getElementById('mobile-menu');
+      const open = m.style.display === 'flex';
+      m.style.display = open ? 'none' : 'flex';
+      document.body.style.overflow = open ? '' : 'hidden';
+    }
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
+
+    // 3D Tilt on cards
+    document.querySelectorAll('.course-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+  </script>
+</body>
+</html>
