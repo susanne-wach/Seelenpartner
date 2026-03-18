@@ -305,18 +305,20 @@
     .nav__links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 18px;
       list-style: none;
     }
     .nav__links a {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       font-weight: 400;
       color: var(--muted);
       letter-spacing: 0.02em;
       transition: color 0.2s;
+      white-space: nowrap;
     }
     .nav__links a:hover { color: var(--magenta); }
-    .nav__cta { font-size: 0.88rem !important; padding: 12px 24px !important; }
+    .nav__cta-group { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .nav__cta { font-size: 0.84rem !important; padding: 10px 18px !important; white-space: nowrap; }
 
     /* Mobile Nav */
     .nav__hamburger {
@@ -1905,7 +1907,7 @@
     @media (max-width: 768px) {
       .section { padding: 72px 0; }
       .container { padding: 0 20px; }
-      .nav__links, .nav__cta { display: none; }
+      .nav__links, .nav__cta-group { display: none; }
       .nav__hamburger { display: flex; }
       .nav__logo-tagline { display: none; }
       .hero { padding-top: 120px; padding-bottom: 72px; }
@@ -1980,15 +1982,17 @@
           <li><a href="#angebote">Angebote</a></li>
           <li><a href="#stimmen">Stimmen</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-weight:600;">Online-Ausbildungen</a></li>
         </ul>
 
-        <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung"
-           target="_blank" rel="noopener noreferrer"
-           class="btn btn--primary nav__cta"
-           aria-label="Sitzung buchen">
-          Sitzung buchen
-        </a>
+        <div class="nav__cta-group">
+          <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline-gold nav__cta" style="white-space:nowrap;">Deine Kurse</a>
+          <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn--primary nav__cta"
+             style="white-space:nowrap;"
+             aria-label="Sitzung buchen">Sitzung buchen</a>
+        </div>
 
         <button class="nav__hamburger" aria-label="Menü öffnen" onclick="toggleMenu(this)">
           <span></span><span></span><span></span>
@@ -2006,7 +2010,7 @@
     <button onclick="toggleMenu()" style="position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">✕</button>
     <a href="#ueber-mich" onclick="toggleMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Über mich</a>
     <a href="#angebote" onclick="toggleMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Angebote</a>
-    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Online-Ausbildungen</a>
+    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Deine Kurse</a>
     <a href="#stimmen" onclick="toggleMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Stimmen</a>
     <a href="#faq" onclick="toggleMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">FAQ</a>
     <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" style="margin-top:16px;background:#DD3089;color:#fff;padding:16px 36px;border-radius:60px;font-size:1rem;">Sitzung buchen</a>

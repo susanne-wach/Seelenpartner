@@ -60,8 +60,8 @@
     .nav__logo { display:flex; align-items:center; gap:12px; }
     .nav__logo-name { font-family:var(--font-serif); font-size:1.25rem; font-weight:500; color:var(--dark); }
     .nav__logo-tagline { font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; }
-    .nav__links { display:flex; align-items:center; gap:28px; list-style:none; }
-    .nav__links a { font-size:.88rem; color:var(--body-text); transition:color .2s; }
+    .nav__links { display:flex; align-items:center; gap:18px; list-style:none; }
+    .nav__links a { font-size:.84rem; color:var(--body-text); transition:color .2s; white-space:nowrap; }
     .nav__links a:hover { color:var(--magenta); }
     .nav__links a.active { color:var(--magenta); font-weight:500; }
     .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 24px; border-radius:60px; font-family:var(--font-sans); font-size:.9rem; font-weight:500; letter-spacing:.03em; cursor:pointer; border:none; text-decoration:none; transition:var(--transition); }
@@ -69,6 +69,7 @@
     .btn--primary:hover { background:#C4256E; transform:translateY(-2px); box-shadow:0 8px 32px rgba(221,48,137,.45); }
     .btn--outline-gold { background:transparent; border:2px solid var(--gold); color:var(--gold); font-weight:600; font-size:.88rem !important; padding:10px 20px !important; }
     .btn--outline-gold:hover { background:var(--gold); color:var(--dark); }
+    .nav__cta-group { display:flex; align-items:center; gap:10px; flex-shrink:0; }
     .nav__hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
     .nav__hamburger span { display:block; width:24px; height:1.5px; background:var(--dark); border-radius:2px; }
     @media(max-width:900px){ .nav__links,.nav__ctas { display:none; } .nav__hamburger { display:flex; } }
@@ -227,9 +228,20 @@
     .reveal-up[data-d="7"]{transition-delay:.56s}
 
     /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .nav__links { display:none; }
+      .nav__cta-group { display:none; }
+      .nav__hamburger { display:flex !important; }
+      .nav__logo-tagline { display:none; }
+    }
     @media(max-width:768px){
       .product-grid,.product-grid--books,.product-grid--free { grid-template-columns:1fr; }
       .trust__grid { grid-template-columns:1fr; gap:28px; }
+      .page-hero { padding:120px 0 60px; }
+      .page-hero h1 { font-size:clamp(2rem,7vw,3rem); }
+      .section-header h2 { font-size:clamp(1.6rem,6vw,2.4rem); }
+      .product-card { max-width:100%; }
+      .product-card__img { height:200px; }
     }
   </style>
 </head>
@@ -267,12 +279,11 @@
           <li><a href="index.html#ueber-mich">Über mich</a></li>
           <li><a href="index.html#angebote">1:1 Sitzung</a></li>
           <li><a href="index.html#stimmen">Stimmen</a></li>
-          <li><a href="kurse.html" class="active">Online-Ausbildungen</a></li>
         </ul>
 
-        <div style="display:flex;align-items:center;gap:10px;">
-          <a href="kurse.html" class="btn btn--outline-gold">✦ Online-Ausbildungen</a>
-          <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" rel="noopener" class="btn btn--primary" style="font-size:.88rem;padding:10px 20px;">Sitzung buchen</a>
+        <div class="nav__cta-group">
+          <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="btn btn--outline-gold" style="white-space:nowrap;">Deine Kurse</a>
+          <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" rel="noopener" class="btn btn--primary" style="white-space:nowrap;">Sitzung buchen</a>
         </div>
 
         <button class="nav__hamburger" onclick="toggleMenu()" aria-label="Menü">
@@ -287,7 +298,7 @@
     <button onclick="toggleMenu()" style="position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">✕</button>
     <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Startseite</a>
     <a href="index.html#angebote" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">1:1 Sitzung</a>
-    <a href="kurse.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Online-Ausbildungen</a>
+    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Deine Kurse</a>
     <a href="index.html#stimmen" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Stimmen</a>
     <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" style="margin-top:12px;background:#DD3089;color:#fff;padding:16px 36px;border-radius:60px;font-size:1rem;">Sitzung buchen</a>
   </div>
@@ -360,7 +371,7 @@
         <!-- 2. HALT -->
         <article class="card reveal-up" data-d="2">
           <div class="card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1519742866993-3681659e2b90?auto=format&fit=crop&w=700&q=80"
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=700&q=80"
                  alt="Frau allein in der Stille – innerer Halt" loading="lazy" />
             <div class="card__img-overlay"></div>
             <span class="card__badge card__badge--kurs">Online-Kurs</span>
@@ -380,8 +391,8 @@
         <!-- 3. Warum Rückzug -->
         <article class="card reveal-up" data-d="3">
           <div class="card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1510771463146-e89e6e86560e?auto=format&fit=crop&w=700&q=80"
-                 alt="Frau blickt nachdenklich in die Ferne – Rückzug verstehen" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?auto=format&fit=crop&w=700&q=80"
+                 alt="Frau allein am Fenster – Schmerz des Rückzugs" loading="lazy" />
             <div class="card__img-overlay"></div>
             <span class="card__badge card__badge--kurs">Online-Kurs</span>
           </div>
@@ -421,8 +432,8 @@
         <!-- 5. Verstehe deine Seelenverbindung -->
         <article class="card reveal-up" data-d="5">
           <div class="card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=700&q=80"
-                 alt="Kosmisches Licht – Seelenverbindung verstehen" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=700&q=80"
+                 alt="Zwei Menschen in stiller Verbindung – Seelenverbindung" loading="lazy" />
             <div class="card__img-overlay"></div>
             <span class="card__badge card__badge--kurs">Online-Kurs</span>
           </div>
@@ -441,7 +452,7 @@
         <!-- 6. Wenn Schutz sich löst -->
         <article class="card reveal-up" data-d="6">
           <div class="card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=700&q=80"
+            <img src="https://images.unsplash.com/photo-1532356884227-66d7c0e9e9d3?auto=format&fit=crop&w=700&q=80"
                  alt="Frau öffnet sich – Schutz loslassen" loading="lazy" />
             <div class="card__img-overlay"></div>
             <span class="card__badge card__badge--kurs">Online-Kurs</span>
