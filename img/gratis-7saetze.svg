@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DD3089"/>
+      <stop offset="50%" style="stop-color:#B02070"/>
+      <stop offset="100%" style="stop-color:#8A1555"/>
+    </linearGradient>
+    <linearGradient id="gold7" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F7DE7A"/>
+      <stop offset="50%" style="stop-color:#CFAC5E"/>
+      <stop offset="100%" style="stop-color:#F7DE7A"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9F5EE;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#F7DE7A;stop-opacity:0.05"/>
+    </linearGradient>
+    <filter id="glow7">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="bigglow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="480" fill="url(#bg7)"/>
+
+  <!-- Shimmer overlay -->
+  <rect width="700" height="480" fill="url(#shimmer)"/>
+
+  <!-- Soft light blob top right -->
+  <ellipse cx="580" cy="80" rx="180" ry="130" fill="#F7DE7A" opacity="0.06"/>
+  <!-- Soft light blob bottom left -->
+  <ellipse cx="120" cy="400" rx="160" ry="120" fill="#EAD1D7" opacity="0.07"/>
+
+  <!-- Large decorative "7" in background (very faint) -->
+  <text x="350" y="340" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="320" font-weight="bold" fill="white" opacity="0.04">7</text>
+
+  <!-- Seven dots / stars decorative -->
+  <circle cx="160" cy="120" r="3" fill="#F7DE7A" opacity="0.6"/>
+  <circle cx="540" cy="90" r="2" fill="#F7DE7A" opacity="0.5"/>
+  <circle cx="600" cy="200" r="3.5" fill="#F7DE7A" opacity="0.4"/>
+  <circle cx="100" cy="280" r="2.5" fill="#F7DE7A" opacity="0.5"/>
+  <circle cx="580" cy="360" r="2" fill="#F7DE7A" opacity="0.45"/>
+  <circle cx="200" cy="390" r="3" fill="#F7DE7A" opacity="0.5"/>
+  <circle cx="460" cy="420" r="2" fill="#F7DE7A" opacity="0.4"/>
+
+  <!-- Top label -->
+  <rect x="245" y="32" width="210" height="30" rx="15" fill="rgba(58,46,61,0.6)"/>
+  <text x="350" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F7DE7A" letter-spacing="2" font-weight="bold">GRATIS · PDF-DOWNLOAD</text>
+
+  <!-- Main number -->
+  <text x="350" y="210" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="bold" fill="url(#gold7)" filter="url(#bigglow)" opacity="0.95">7</text>
+
+  <!-- Main title -->
+  <text x="350" y="262" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="bold" fill="white" letter-spacing="6">SÄTZE</text>
+
+  <!-- Decorative line with diamonds -->
+  <line x1="180" y1="285" x2="305" y2="285" stroke="rgba(247,222,122,0.5)" stroke-width="0.8"/>
+  <rect x="345" y="280" width="10" height="10" fill="#F7DE7A" opacity="0.7" transform="rotate(45 350 285)"/>
+  <line x1="395" y1="285" x2="520" y2="285" stroke="rgba(247,222,122,0.5)" stroke-width="0.8"/>
+
+  <!-- Subtitle -->
+  <text x="350" y="320" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="rgba(255,255,255,0.85)" letter-spacing="1.5">die dich tragen, wenn keine anderen Worte reichen</text>
+
+  <!-- Second decorative line -->
+  <line x1="260" y1="348" x2="440" y2="348" stroke="rgba(207,172,94,0.3)" stroke-width="0.6"/>
+
+  <!-- Author name -->
+  <text x="350" y="385" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#F7DE7A" opacity="0.8" letter-spacing="3">SUSANNE WACHTER</text>
+
+  <!-- Corner accents -->
+  <line x1="30" y1="22" x2="62" y2="22" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="30" y1="22" x2="30" y2="54" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="670" y1="22" x2="638" y2="22" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="670" y1="22" x2="670" y2="54" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="30" y1="458" x2="62" y2="458" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="30" y1="458" x2="30" y2="426" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="670" y1="458" x2="638" y2="458" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+  <line x1="670" y1="458" x2="670" y2="426" stroke="#F7DE7A" stroke-width="1" opacity="0.35"/>
+</svg>

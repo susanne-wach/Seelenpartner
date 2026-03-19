@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3A2E3D"/>
+      <stop offset="60%" style="stop-color:#4A3050"/>
+      <stop offset="100%" style="stop-color:#2A1E2D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F7DE7A"/>
+      <stop offset="50%" style="stop-color:#CFAC5E"/>
+      <stop offset="100%" style="stop-color:#F7DE7A"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DD3089;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#CFAC5E;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CFAC5E;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#DD3089;stop-opacity:0.12"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="480" fill="url(#bg)"/>
+
+  <!-- Subtle radial glow center -->
+  <ellipse cx="350" cy="240" rx="280" ry="180" fill="#DD3089" opacity="0.04"/>
+
+  <!-- Wave elements - calm, flowing -->
+  <path d="M0,300 Q87,270 175,290 Q262,310 350,285 Q437,260 525,280 Q612,300 700,270 L700,480 L0,480 Z" fill="url(#wave1)"/>
+  <path d="M0,330 Q87,305 175,325 Q262,345 350,315 Q437,290 525,310 Q612,335 700,305 L700,480 L0,480 Z" fill="url(#wave2)"/>
+  <path d="M0,370 Q87,350 175,365 Q262,380 350,355 Q437,330 525,350 Q612,368 700,345 L700,480 L0,480 Z" fill="#CFAC5E" opacity="0.06"/>
+
+  <!-- Decorative circles - like ripples on water -->
+  <circle cx="350" cy="230" r="120" fill="none" stroke="#CFAC5E" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="350" cy="230" r="160" fill="none" stroke="#CFAC5E" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="350" cy="230" r="200" fill="none" stroke="#DD3089" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Central symbol: calm water drop / peace symbol -->
+  <ellipse cx="350" cy="160" rx="28" ry="35" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.7"/>
+  <line x1="350" y1="125" x2="350" y2="195" stroke="url(#gold)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Main title -->
+  <text x="350" y="248" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" letter-spacing="1" fill="url(#gold)" filter="url(#glow)">Ruhig werden</text>
+  <text x="350" y="288" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" letter-spacing="1" fill="url(#gold)" filter="url(#glow)">wenn es tobt</text>
+
+  <!-- Subtitle -->
+  <text x="350" y="325" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#EAD1D7" opacity="0.85" letter-spacing="2">Energetische Werkzeuge für den Sturm</text>
+
+  <!-- Decorative line -->
+  <line x1="260" y1="342" x2="440" y2="342" stroke="#CFAC5E" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Small dots decoration -->
+  <circle cx="250" cy="342" r="2.5" fill="#CFAC5E" opacity="0.6"/>
+  <circle cx="450" cy="342" r="2.5" fill="#CFAC5E" opacity="0.6"/>
+
+  <!-- Author name -->
+  <text x="350" y="378" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#CFAC5E" opacity="0.7" letter-spacing="3">SUSANNE WACHTER</text>
+
+  <!-- Top label -->
+  <rect x="250" y="30" width="200" height="28" rx="14" fill="#DD3089" opacity="0.85"/>
+  <text x="350" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" letter-spacing="1.5" font-weight="bold">ONLINE-KURS</text>
+
+  <!-- Corner accents -->
+  <line x1="30" y1="20" x2="60" y2="20" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="30" y1="20" x2="30" y2="50" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="670" y1="20" x2="640" y2="20" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="670" y1="20" x2="670" y2="50" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="30" y1="460" x2="60" y2="460" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="30" y1="460" x2="30" y2="430" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="670" y1="460" x2="640" y2="460" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+  <line x1="670" y1="460" x2="670" y2="430" stroke="#CFAC5E" stroke-width="1" opacity="0.4"/>
+</svg>
