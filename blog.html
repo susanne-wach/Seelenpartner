@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Susanne Wachter – Impulse für deinen Seelenpartnerprozess</title>
+  <meta name="description" content="Ehrliche Einblicke, energetische Impulse und Texte, die du dir nicht erklären musst – für Frauen in Seelenpartnerprozessen." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://susanne-wachter.at/blog.html" />
+  <meta property="og:title" content="Blog | Susanne Wachter – Impulse für deinen Seelenpartnerprozess" />
+  <meta property="og:description" content="Ehrliche Einblicke für Frauen in Seelenpartnerprozessen." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --magenta:    #DD3089;
+      --gold-light: #F7DE7A;
+      --gold:       #CFAC5E;
+      --white:      #FFFFFF;
+      --dark:       #3A2E3D;
+      --blush:      #EAD1D7;
+      --sand:       #F9F5EE;
+      --body-text:  #4A3F4E;
+      --muted:      #7E6B84;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --radius:     12px;
+      --radius-lg:  24px;
+      --shadow:     0 4px 32px rgba(58,46,61,.10);
+      --shadow-lg:  0 16px 64px rgba(58,46,61,.18);
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family:var(--font-sans); color:var(--body-text); background:var(--white); line-height:1.7; overflow-x:hidden; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
+
+    /* ── GOLD TEXT ── */
+    .gold-text {
+      background: linear-gradient(120deg,#FFE57A 0%,#F0C040 18%,#CFAC5E 35%,#FFE28A 50%,#D4A030 68%,#F7DE7A 82%,#FFE57A 100%);
+      background-size:300% auto;
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      filter: drop-shadow(0 0 6px rgba(255,220,80,.75)) drop-shadow(0 0 18px rgba(207,172,94,.5));
+      animation: goldFlow 6s linear infinite; display:inline; font-style:italic;
+    }
+    @keyframes goldFlow { 0%{background-position:0% center} 100%{background-position:300% center} }
+
+    /* ── SCROLL PROGRESS ── */
+    .scroll-progress { position:fixed; top:0; left:0; height:2.5px; width:0%; background:linear-gradient(90deg,var(--magenta),#F7DE7A,var(--gold)); z-index:999; box-shadow:0 0 10px rgba(221,48,137,.5); transition:width .08s linear; }
+
+    /* ── NAV ── */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 0; background:rgba(249,245,238,.88); backdrop-filter:blur(20px); border-bottom:1px solid transparent; transition:var(--transition); }
+    .nav.scrolled { padding:12px 0; background:rgba(249,245,238,.97); border-bottom-color:rgba(234,209,215,.5); box-shadow:0 2px 24px rgba(58,46,61,.08); }
+    .nav .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .nav__inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .nav__logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
+    .nav__logo-name { font-family:var(--font-serif); font-size:1.15rem; font-weight:500; color:var(--dark); white-space:nowrap; }
+    .nav__logo-tagline { font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; white-space:nowrap; }
+    .nav__links { display:flex; align-items:center; gap:16px; list-style:none; }
+    .nav__links a { font-size:.82rem; color:var(--body-text); transition:color .2s; white-space:nowrap; }
+    .nav__links a:hover { color:var(--magenta); }
+    .nav__links a.active { color:var(--magenta); font-weight:500; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 24px; border-radius:60px; font-family:var(--font-sans); font-size:.9rem; font-weight:500; cursor:pointer; border:none; text-decoration:none; transition:var(--transition); }
+    .btn--primary { background:var(--magenta); color:#fff; box-shadow:0 4px 20px rgba(221,48,137,.3); }
+    .btn--primary:hover { background:#C4256E; transform:translateY(-2px); }
+    .btn--outline-gold { background:transparent; border:2px solid var(--gold); color:var(--gold); font-weight:600; font-size:.85rem !important; padding:9px 18px !important; white-space:nowrap; }
+    .btn--outline-gold:hover { background:var(--gold); color:var(--dark); }
+    .nav__cta-group { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+    .nav__cta { font-size:.82rem !important; padding:9px 16px !important; white-space:nowrap; }
+    .nav__hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .nav__hamburger span { display:block; width:24px; height:1.5px; background:var(--dark); border-radius:2px; }
+    @media(max-width:900px){ .nav__links,.nav__cta-group { display:none; } .nav__hamburger { display:flex; } }
+
+    /* ── CONTAINER ── */
+    .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+    .section { padding:96px 0; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      min-height:46vh; padding:140px 0 80px;
+      background: linear-gradient(160deg,var(--sand) 0%,#EAD1D7 55%,var(--sand) 100%);
+      display:flex; align-items:center; text-align:center; position:relative; overflow:hidden;
+    }
+    .page-hero::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse 70% 60% at 50% 80%, rgba(221,48,137,.07) 0%, transparent 70%);
+    }
+    .page-hero__eyebrow { font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--magenta); margin-bottom:16px; }
+    .page-hero__title { font-family:var(--font-serif); font-size:clamp(2.4rem,5vw,4rem); font-weight:300; color:var(--dark); line-height:1.15; margin-bottom:20px; }
+    .page-hero__sub { font-size:1.1rem; color:var(--muted); max-width:560px; margin:0 auto; font-style:italic; }
+
+    /* ── FILTER BAR ── */
+    .filter-bar { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; padding:32px 0 8px; }
+    .filter-btn { padding:8px 20px; border-radius:60px; border:1.5px solid var(--blush); background:transparent; font-family:var(--font-sans); font-size:.82rem; color:var(--muted); cursor:pointer; transition:var(--transition); }
+    .filter-btn:hover, .filter-btn.active { background:var(--magenta); border-color:var(--magenta); color:#fff; }
+
+    /* ── BLOG GRID ── */
+    .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; padding-top:16px; }
+    @media(max-width:900px){ .blog-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:600px){ .blog-grid { grid-template-columns:1fr; } }
+
+    /* ── BLOG CARD ── */
+    .blog-card {
+      background:var(--white); border-radius:var(--radius-lg);
+      box-shadow:var(--shadow); overflow:hidden;
+      transition:var(--transition); display:flex; flex-direction:column;
+    }
+    .blog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .blog-card__img-wrap { position:relative; aspect-ratio:16/9; overflow:hidden; }
+    .blog-card__img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .blog-card:hover .blog-card__img-wrap img { transform:scale(1.05); }
+    .blog-card__cat {
+      position:absolute; top:14px; left:14px;
+      background:rgba(58,46,61,.75); backdrop-filter:blur(8px);
+      color:#fff; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase;
+      padding:5px 12px; border-radius:60px;
+    }
+    .blog-card__cat--magenta { background:var(--magenta); }
+    .blog-card__cat--gold { background:var(--gold); color:var(--dark); }
+    .blog-card__body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .blog-card__date { font-size:.72rem; color:var(--muted); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .blog-card__date::before { content:''; display:inline-block; width:20px; height:1px; background:var(--blush); }
+    .blog-card__title { font-family:var(--font-serif); font-size:1.35rem; font-weight:500; color:var(--dark); line-height:1.3; margin-bottom:12px; }
+    .blog-card__excerpt { font-size:.88rem; color:var(--muted); line-height:1.65; flex:1; margin-bottom:20px; }
+    .blog-card__read { display:inline-flex; align-items:center; gap:6px; font-size:.82rem; font-weight:500; color:var(--magenta); transition:gap .2s; }
+    .blog-card:hover .blog-card__read { gap:10px; }
+
+    /* ── FEATURED CARD (first post, full width) ── */
+    .blog-card--featured {
+      grid-column:1/-1; display:grid; grid-template-columns:1.2fr 1fr; min-height:360px;
+    }
+    .blog-card--featured .blog-card__img-wrap { aspect-ratio:auto; height:100%; }
+    .blog-card--featured .blog-card__title { font-size:1.9rem; }
+    .blog-card--featured .blog-card__body { padding:40px; justify-content:center; }
+    @media(max-width:700px){
+      .blog-card--featured { grid-template-columns:1fr; }
+      .blog-card--featured .blog-card__img-wrap { aspect-ratio:16/9; height:auto; }
+    }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal-up { opacity:0; transform:translateY(28px); transition:opacity .6s ease, transform .6s ease; }
+    .reveal-up.visible { opacity:1; transform:translateY(0); }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background:linear-gradient(135deg,var(--dark) 0%,#4A2040 100%);
+      padding:80px 0; text-align:center; position:relative; overflow:hidden;
+    }
+    .cta-strip::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(221,48,137,.18) 0%,transparent 70%); }
+    .cta-strip h2 { font-family:var(--font-serif); font-size:clamp(1.8rem,3.5vw,2.8rem); color:#fff; margin-bottom:16px; font-weight:300; position:relative; }
+    .cta-strip p { color:rgba(255,255,255,.7); margin-bottom:32px; font-style:italic; position:relative; }
+    .cta-strip .btn { position:relative; }
+
+    /* ── FOOTER ── */
+    .footer { background:var(--dark); color:rgba(255,255,255,.6); padding:56px 0 32px; }
+    .footer__grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+    @media(max-width:700px){ .footer__grid { grid-template-columns:1fr; gap:32px; } }
+    .footer__brand-name { font-family:var(--font-serif); font-size:1.4rem; color:#fff; margin-bottom:6px; }
+    .footer__brand-tagline { font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .footer__text { font-size:.85rem; line-height:1.7; }
+    .footer h4 { font-family:var(--font-serif); font-size:1rem; color:#fff; margin-bottom:16px; font-weight:400; }
+    .footer__links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .footer__links a { font-size:.85rem; color:rgba(255,255,255,.6); transition:color .2s; }
+    .footer__links a:hover { color:var(--gold); }
+    .footer__bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:24px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .footer__copy { font-size:.78rem; }
+    .footer__legal { display:flex; gap:20px; }
+    .footer__legal a { font-size:.78rem; color:rgba(255,255,255,.5); transition:color .2s; }
+    .footer__legal a:hover { color:var(--gold); }
+
+    /* ── MOBILE MENU ── */
+    #mobile-menu { display:none; position:fixed; inset:0; background:rgba(58,46,61,0.97); z-index:200; flex-direction:column; align-items:center; justify-content:center; gap:28px; }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollBar"></div>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Startseite">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="13" cy="18" r="10" stroke="url(#ng)" stroke-width="1.5" fill="none"/>
+          <circle cx="23" cy="18" r="10" stroke="url(#ng)" stroke-width="1.5" fill="none"/>
+          <circle cx="18" cy="18" r="2.5" fill="url(#ng)"/>
+          <defs>
+            <linearGradient id="ng" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#DD3089"/>
+              <stop offset="100%" stop-color="#CFAC5E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <span class="nav__logo-name">Susanne Wachter</span>
+          <span class="nav__logo-tagline">Seelenpartner-Begleitung</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#ueber-mich">Über mich</a></li>
+        <li><a href="index.html#angebote">Angebote</a></li>
+        <li><a href="index.html#stimmen">Stimmen</a></li>
+        <li><a href="kurse.html">Online-Kurse</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+
+      <div class="nav__cta-group">
+        <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold nav__cta">Deine Kurse</a>
+        <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" rel="noopener noreferrer" class="btn btn--primary nav__cta">Sitzung buchen</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Menü öffnen" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <button onclick="toggleMenu()" style="position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;">✕</button>
+  <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Startseite</a>
+  <a href="index.html#angebote" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Angebote</a>
+  <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener noreferrer" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Deine Kurse</a>
+  <a href="kurse.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Online-Kurse</a>
+  <a href="blog.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#F7DE7A;">Blog</a>
+  <a href="index.html#stimmen" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:#fff;">Stimmen</a>
+  <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" style="margin-top:12px;background:#DD3089;color:#fff;padding:16px 36px;border-radius:60px;font-size:1rem;">Sitzung buchen</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<header class="page-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="page-hero__eyebrow">✦ Impulse · Einblicke · Wahrheiten</p>
+    <h1 class="page-hero__title">
+      Texte, die du dir<br><em class="gold-text">nicht erklären musst.</em>
+    </h1>
+    <p class="page-hero__sub">Ehrliche Worte für Frauen, die tiefer verstehen wollen — was in ihrer Seelenverbindung wirklich passiert.</p>
+  </div>
+</header>
+
+<!-- ── MAIN ── -->
+<main>
+<section class="section">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="filter-bar" role="tablist" aria-label="Blog-Kategorien">
+      <button class="filter-btn active" onclick="filterPosts('all')" role="tab">Alle Beiträge</button>
+      <button class="filter-btn" onclick="filterPosts('verstehen')" role="tab">Verstehen</button>
+      <button class="filter-btn" onclick="filterPosts('loslassen')" role="tab">Loslassen</button>
+      <button class="filter-btn" onclick="filterPosts('stärke')" role="tab">Innere Stärke</button>
+      <button class="filter-btn" onclick="filterPosts('energetik')" role="tab">Energetik</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- ══ FEATURED POST ══ -->
+      <article class="blog-card blog-card--featured reveal-up" data-cat="verstehen">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&q=80&auto=format"
+               alt="Frau schaut nachdenklich aus dem Fenster" loading="lazy" />
+          <span class="blog-card__cat blog-card__cat--magenta">Verstehen</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">März 2026 · 7 Min. Lesezeit</p>
+          <h2 class="blog-card__title">Warum sein Schweigen nichts mit dir zu tun hat — und warum du es trotzdem persönlich nimmst</h2>
+          <p class="blog-card__excerpt">Er antwortet nicht. Zieht sich zurück. Sendet Signale, die du nicht einordnen kannst. Und du analysierst. Wieder und wieder. Dabei liegt die Antwort nicht bei ihm — sondern in dem, was diese Stille in dir auslöst.</p>
+          <a href="blog/warum-sein-schweigen.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="blog-card reveal-up" data-cat="loslassen" data-d="1">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80&auto=format"
+               alt="Frau allein in warmem Licht" loading="lazy" />
+          <span class="blog-card__cat">Loslassen</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">Februar 2026 · 5 Min. Lesezeit</p>
+          <h2 class="blog-card__title">Du kannst ihn nicht loslassen — weil du noch gar nicht weißt, was du wirklich hältst</h2>
+          <p class="blog-card__excerpt">Loslassen funktioniert nicht durch Entscheidungen. Es passiert, wenn du endlich siehst, was du wirklich festhältst — und warum.</p>
+          <a href="blog/nicht-loslassen-koennen.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="blog-card reveal-up" data-cat="energetik" data-d="2">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&auto=format"
+               alt="Frau in tiefer Stille" loading="lazy" />
+          <span class="blog-card__cat blog-card__cat--gold">Energetik</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">Januar 2026 · 6 Min. Lesezeit</p>
+          <h2 class="blog-card__title">Was ist ein Seelenpartnerprozess wirklich — und warum reicht normale Beratung dort nicht?</h2>
+          <p class="blog-card__excerpt">Seelenpartnerschaft klingt romantisch. Ist sie auch. Und gleichzeitig ist sie eines der anspruchsvollsten Felder, die es energetisch gibt.</p>
+          <a href="blog/was-ist-seelenpartnerprozess.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+      <!-- POST 4 -->
+      <article class="blog-card reveal-up" data-cat="stärke" data-d="3">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=600&q=80&auto=format"
+               alt="Frau steht aufrecht, blickt in die Ferne" loading="lazy" />
+          <span class="blog-card__cat">Innere Stärke</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">Dezember 2025 · 4 Min. Lesezeit</p>
+          <h2 class="blog-card__title">Der Moment, in dem du aufhörst zu warten — und anfängst, bei dir zu bleiben</h2>
+          <p class="blog-card__excerpt">Warten ist keine Liebeserklärung. Es ist eine Entscheidung, sich selbst auf Pause zu setzen. Dieser Text zeigt, wie der Weg zurück zu dir aussieht.</p>
+          <a href="blog/aufhoeren-zu-warten.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+      <!-- POST 5 -->
+      <article class="blog-card reveal-up" data-cat="verstehen" data-d="4">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80&auto=format"
+               alt="Frau nachdenklich, sanftes Licht" loading="lazy" />
+          <span class="blog-card__cat blog-card__cat--magenta">Verstehen</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">November 2025 · 5 Min. Lesezeit</p>
+          <h2 class="blog-card__title">On/Off-Beziehungen: Warum du immer wieder zurückgehst — obwohl du weißt, dass es nicht gut tut</h2>
+          <p class="blog-card__excerpt">Das ist keine Schwäche. Das ist Energetik. Und wenn du verstehst, was dich wirklich bindet, kannst du zum ersten Mal wirklich wählen.</p>
+          <a href="blog/on-off-beziehungen.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+      <!-- POST 6 -->
+      <article class="blog-card reveal-up" data-cat="loslassen" data-d="5">
+        <div class="blog-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&q=80&auto=format"
+               alt="Zwei Hände, die sich fast berühren" loading="lazy" />
+          <span class="blog-card__cat">Loslassen</span>
+        </div>
+        <div class="blog-card__body">
+          <p class="blog-card__date">Oktober 2025 · 6 Min. Lesezeit</p>
+          <h2 class="blog-card__title">Wenn Liebe wehtut — was dein Schmerz dir über dich selbst sagen will</h2>
+          <p class="blog-card__excerpt">Schmerz in einer Seelenverbindung ist kein Fehler. Er ist eine Botschaft. Die Frage ist: Hörst du schon zu?</p>
+          <a href="blog/wenn-liebe-wehtut.html" class="blog-card__read">Weiterlesen →</a>
+        </div>
+      </article>
+
+    </div><!-- /blog-grid -->
+
+    <!-- Mehr laden Hinweis -->
+    <p style="text-align:center;margin-top:48px;color:var(--muted);font-size:.88rem;font-style:italic;">
+      Neue Artikel erscheinen regelmäßig. ✦ Folge mir auf Instagram für erste Einblicke.
+    </p>
+
+  </div>
+</section>
+</main>
+
+<!-- ── CTA STRIP ── -->
+<section class="cta-strip">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>Du liest. Du erkennst dich.<br><em class="gold-text">Der nächste Schritt ist deiner.</em></h2>
+    <p>Wenn ein Text etwas in dir getroffen hat — dann ist das kein Zufall.</p>
+    <a href="https://calendly.com/your-balance/seelenlicht-seelenverbindung" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="font-size:1rem;padding:16px 40px;">Jetzt 1:1 Sitzung buchen →</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand-name">Susanne Wachter</p>
+        <p class="footer__brand-tagline">Seelenpartner-Begleitung</p>
+        <p class="footer__text">Energetische Begleitung für Frauen in schwierigen Seelenpartnerprozessen. Online. Tiefgehend. Aus eigener Erfahrung.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="index.html#ueber-mich">Über mich</a></li>
+          <li><a href="index.html#angebote">Angebote</a></li>
+          <li><a href="kurse.html">Online-Kurse</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul class="footer__links">
+          <li><a href="https://your-balance.at/impressum/" target="_blank" rel="noopener">Impressum</a></li>
+          <li><a href="https://your-balance.at/datenschutzerklarung/" target="_blank" rel="noopener">Datenschutz</a></li>
+          <li><a href="https://your-balance.at/agb/" target="_blank" rel="noopener">AGB</a></li>
+          <li><a href="https://at.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener">Trustpilot-Bewertungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Susanne Wachter · Alle Rechte vorbehalten</p>
+      <div class="footer__legal">
+        <a href="https://your-balance.at/impressum/" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://your-balance.at/datenschutzerklarung/" target="_blank" rel="noopener">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll Progress
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('scrollBar').style.width = pct + '%';
+    document.getElementById('nav').classList.toggle('scrolled', h.scrollTop > 40);
+  });
+
+  // Mobile Menu
+  function toggleMenu() {
+    const m = document.getElementById('mobile-menu');
+    m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Reveal on Scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        const d = parseFloat(e.target.dataset.d || 0) * 80;
+        setTimeout(() => e.target.classList.add('visible'), d);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+  // Filter Posts
+  function filterPosts(cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('#blogGrid .blog-card').forEach(card => {
+      const show = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = show ? 'flex' : 'none';
+      card.style.flexDirection = show ? 'column' : '';
+      if (card.classList.contains('blog-card--featured')) {
+        card.style.display = show ? 'grid' : 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
