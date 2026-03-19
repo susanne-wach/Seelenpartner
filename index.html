@@ -1938,7 +1938,15 @@
     ═══════════════════════════════════════════════ */
     @media (max-width: 1024px) {
       .hero__inner { grid-template-columns: 1fr; }
-      .hero__visual { display: none; }
+      /* Foto oben, Text darunter */
+      .hero__visual {
+        display: block;
+        order: -1;
+        padding-bottom: 0;
+        margin-bottom: 32px;
+      }
+      .hero__photo-wrap { height: 420px; }
+      .hero__card { display: none; } /* Karte auf Tablet/Mobile ausblenden */
       .about__inner { grid-template-columns: 1fr; gap: 40px; }
       .about__visual-wrap { max-width: 400px; margin: 0 auto; }
       .about__credential-badge {
@@ -1961,9 +1969,10 @@
       .nav__logo-tagline { display: none; }
 
       /* Hero */
-      .hero { padding-top: 110px; padding-bottom: 60px; }
+      .hero { padding-top: 80px; padding-bottom: 60px; }
       .hero__inner { grid-template-columns: 1fr; }
-      .hero__visual { display: none; }
+      .hero__photo-wrap { height: 320px; border-radius: 0; }
+      .hero__visual { margin: 0 -18px 28px; } /* full-bleed auf Mobile */
       .hero__story { max-width: 100%; padding: 20px; }
       .hero__title { font-size: 2.4rem; }
       .hero__subtitle { font-size: 1rem; }
