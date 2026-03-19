@@ -1939,39 +1939,87 @@
     @media (max-width: 1024px) {
       .hero__inner { grid-template-columns: 1fr; }
       .hero__visual { display: none; }
-      .hero__photo-wrap { height: 380px; }
-      .hero__card { left: 0; right: 0; position: relative; margin-top: 20px; }
-      .about__inner { grid-template-columns: 1fr; }
-      .about__visual-wrap { max-width: 360px; }
-      .about__credential-badge { bottom: 16px; right: 16px; }
+      .about__inner { grid-template-columns: 1fr; gap: 40px; }
+      .about__visual-wrap { max-width: 400px; margin: 0 auto; }
+      .about__credential-badge {
+        position: static;
+        margin-top: 20px;
+        max-width: 100%;
+        right: auto; bottom: auto;
+      }
       .process__steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
       .process__steps::before { display: none; }
     }
 
     @media (max-width: 768px) {
-      .section { padding: 72px 0; }
-      .container { padding: 0 20px; }
+      .section { padding: 64px 0; }
+      .container { padding: 0 18px; }
+
+      /* Nav */
       .nav__links, .nav__cta-group { display: none; }
       .nav__hamburger { display: flex; }
       .nav__logo-tagline { display: none; }
-      .hero { padding-top: 120px; padding-bottom: 72px; }
-      .hero__story { max-width: 100%; }
-      .hero__ctas { flex-direction: column; align-items: flex-start; }
-      .hero__trust { flex-direction: column; align-items: flex-start; gap: 12px; }
+
+      /* Hero */
+      .hero { padding-top: 110px; padding-bottom: 60px; }
+      .hero__inner { grid-template-columns: 1fr; }
+      .hero__visual { display: none; }
+      .hero__story { max-width: 100%; padding: 20px; }
+      .hero__title { font-size: 2.4rem; }
+      .hero__subtitle { font-size: 1rem; }
+      .hero__ctas { flex-direction: column; align-items: stretch; }
+      .hero__ctas .btn { text-align: center; }
+      .hero__trust { flex-direction: column; align-items: flex-start; gap: 10px; }
       .hero__trust-sep { display: none; }
+
+      /* Recognition */
       .recognition__grid { grid-template-columns: 1fr; }
-      .recognition__item { border-left: none; border-top: 1px solid rgba(255,255,255,0.06); }
+      .recognition__item { border-left: none; border-top: 1px solid rgba(255,255,255,0.06); padding: 28px 0; }
       .recognition__item:first-child { border-top: none; }
-      .problem__grid { grid-template-columns: 1fr; gap: 40px; }
+
+      /* Problem */
+      .problem__grid { grid-template-columns: 1fr; gap: 36px; }
+      .problem__moments { padding: 28px 20px; }
+
+      /* Bridge */
       .bridge__pillars { grid-template-columns: 1fr; }
-      .skeptic__inner { grid-template-columns: 1fr; gap: 40px; }
-      .skeptic__then-now { grid-template-columns: 1fr; }
+
+      /* About */
+      .about__inner { grid-template-columns: 1fr; gap: 32px; }
+      .about__visual-wrap { max-width: 100%; }
+      .about__photo-frame { aspect-ratio: 3/2; }
+      .about__credential-badge {
+        position: static;
+        margin-top: 16px;
+        max-width: 100%;
+        right: auto; bottom: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 16px;
+      }
+      .about__credential-title { grid-column: 1 / -1; }
+
+      /* Skeptic */
+      .skeptic__inner { grid-template-columns: 1fr; gap: 36px; }
+      .skeptic__then-now { grid-template-columns: 1fr; gap: 12px; }
+      .skeptic__bw-photo { max-width: 100%; }
+
+      /* Offers */
       .offers__grid { grid-template-columns: 1fr; }
+
+      /* Perfect for you */
       .pfdf__grid { grid-template-columns: 1fr; }
+
+      /* Videos */
       .videos__grid { grid-template-columns: 1fr; }
-      .process__steps { grid-template-columns: 1fr; }
-      .footer__inner { grid-template-columns: 1fr; }
-      .footer__links { align-items: flex-start; }
+
+      /* Process */
+      .process__steps { grid-template-columns: 1fr; gap: 24px; }
+
+      /* Footer */
+      .footer__inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer__links { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .footer__links a { font-size: 0.9rem; }
       .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
     }
   </style>
