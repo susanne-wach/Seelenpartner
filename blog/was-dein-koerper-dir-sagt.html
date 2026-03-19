@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) — Consent Mode v2 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1OS9LVPFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2 — Standardmäßig DSGVO-konform abgelehnt
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    wait_for_update: 500
+  });
   gtag('js', new Date());
   gtag('config', 'G-Z1OS9LVPFW');
 </script>
@@ -125,6 +131,8 @@
     .footer__legal a:hover { color:var(--gold); }
     #mobile-menu { display:none; position:fixed; inset:0; background:rgba(58,46,61,0.97); z-index:200; flex-direction:column; align-items:center; justify-content:center; gap:28px; }
   </style>
+
+<script src="../cookie-consent.js" defer></script>
 </head>
 <body>
 <div class="scroll-progress" id="scrollBar"></div>

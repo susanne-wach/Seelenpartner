@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) — Consent Mode v2 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1OS9LVPFW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2 — Standardmäßig DSGVO-konform abgelehnt
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    wait_for_update: 500
+  });
   gtag('js', new Date());
   gtag('config', 'G-Z1OS9LVPFW');
 </script>
@@ -252,6 +258,8 @@
       .product-card__img { height:200px; }
     }
   </style>
+
+<script src="cookie-consent.js" defer></script>
 </head>
 
 <body>
