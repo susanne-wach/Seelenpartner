@@ -356,10 +356,10 @@
     ═══════════════════════════════════════════════ */
     .hero {
       padding-top: 140px;
-      padding-bottom: 100px;
+      padding-bottom: 120px;
       background: linear-gradient(160deg, var(--sand) 0%, var(--white) 55%, var(--blush) 100%);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     .hero::before {
       content: '';
@@ -446,16 +446,41 @@
       background: var(--blush);
     }
 
-    /* Hero Visual Card */
+    /* Hero Visual */
     .hero__visual {
       position: relative;
+      padding-bottom: 60px; /* space for card overlay */
+    }
+    .hero__photo-wrap {
+      border-radius: 28px;
+      overflow: hidden;
+      height: 500px;
+      box-shadow: 0 28px 80px rgba(58,46,61,.22), 0 0 0 1px rgba(207,172,94,.18);
+      position: relative;
+    }
+    .hero__photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero__photo-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(58,46,61,.35) 100%);
+      border-radius: 28px;
+      pointer-events: none;
     }
     .hero__card {
       background: var(--white);
       border-radius: var(--radius-lg);
-      padding: 48px 40px 44px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
+      padding: 32px 32px 36px;
+      box-shadow: 0 16px 60px rgba(58,46,61,.18);
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      right: 20px;
       overflow: visible;
     }
     .hero__card::before {
@@ -1911,6 +1936,8 @@
     @media (max-width: 1024px) {
       .hero__inner { grid-template-columns: 1fr; }
       .hero__visual { display: none; }
+      .hero__photo-wrap { height: 380px; }
+      .hero__card { left: 0; right: 0; position: relative; margin-top: 20px; }
       .about__inner { grid-template-columns: 1fr; }
       .about__visual-wrap { max-width: 360px; }
       .about__credential-badge { bottom: 16px; right: 16px; }
@@ -2116,9 +2143,14 @@
           </div>
         </div>
 
-        <!-- Visual Card (Desktop) -->
-        <div class="hero__visual" aria-hidden="true">
+        <!-- Visual: Foto + Testimonial-Overlay -->
+        <div class="hero__visual">
           <div class="hero__floating-pill">Seelenpartner-Prozess</div>
+          <div class="hero__photo-wrap">
+            <img src="img/susanne-herz.webp"
+                 alt="Susanne Wachter – Energetikerin & Seelenpartner-Begleiterin"
+                 loading="eager" />
+          </div>
           <div class="hero__card">
             <p class="hero__card-quote">
               „Ich habe endlich verstanden, warum ich nicht loslassen konnte.
