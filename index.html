@@ -99,13 +99,19 @@
       font-size: 16px;
     }
 
+    html {
+      overflow-x: hidden; /* Wurzel-Fix für horizontales Scrollen */
+      max-width: 100%;
+    }
+
     body {
       font-family: var(--font-sans);
       color: var(--body-text);
       background: var(--white);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden; /* verhindert horizontales Wackeln */
+      overflow-x: hidden;
+      max-width: 100%;
     }
 
     img { max-width: 100%; height: auto; display: block; }
@@ -360,7 +366,7 @@
       padding-bottom: 120px;
       background: linear-gradient(160deg, var(--sand) 0%, var(--white) 55%, var(--blush) 100%);
       position: relative;
-      overflow: visible;
+      overflow: hidden;
     }
     .hero::before {
       content: '';
@@ -1936,7 +1942,6 @@
     /* ═══════════════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════════════ */
-    ═══════════════════════════════════════════════ */
     @media (max-width: 1024px) {
       .hero__inner { grid-template-columns: 1fr; }
       /* Foto oben, Text darunter */
@@ -1972,8 +1977,8 @@
       /* Hero */
       .hero { padding-top: 80px; padding-bottom: 60px; }
       .hero__inner { grid-template-columns: 1fr; }
-      .hero__photo-wrap { height: 320px; border-radius: 0; width: 100vw; }
-      .hero__visual { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); margin-bottom: 28px; }
+      .hero__photo-wrap { height: 320px; border-radius: 0; width: 100%; }
+      .hero__visual { width: 100%; margin-left: 0; margin-right: 0; margin-bottom: 28px; }
       .hero__story { max-width: 100%; padding: 20px; }
       .hero__title { font-size: 2.4rem; }
       .hero__subtitle { font-size: 1rem; }
