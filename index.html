@@ -3122,6 +3122,11 @@
   </footer>
 
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
   <!-- ═══════════════════════════════════════════════
        JAVASCRIPT — Enhanced
   ═══════════════════════════════════════════════ -->
@@ -3153,12 +3158,14 @@
 
     // ── Scroll To Top Button ─────────────────────────
     const scrollTopBtn = document.getElementById('scrollToTop');
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // ── FAQ Accordion ─────────────────────────────────
     function toggleFaq(btn) {
@@ -3327,10 +3334,5 @@
 
   </script>
 
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" aria-label="Nach oben scrollen" title="Nach oben">
-    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
 </body>
 </html>
