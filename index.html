@@ -2038,6 +2038,49 @@
       .footer__links a { font-size: 0.9rem; }
       .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
     }
+
+    /* ═══════════════════════════════════════════════
+       SCROLL TO TOP BUTTON
+    ═══════════════════════════════════════════════ */
+    #scrollToTop {
+      position: fixed;
+      bottom: 36px;
+      right: 28px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--magenta), var(--gold));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(221,48,137,0.4);
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      pointer-events: none;
+      z-index: 999;
+    }
+    #scrollToTop.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    #scrollToTop:hover {
+      box-shadow: 0 6px 28px rgba(221,48,137,0.6);
+      transform: translateY(-3px) scale(1.05);
+    }
+    #scrollToTop svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
   </style>
 
 <script src="cookie-consent.js" defer></script>
@@ -3107,6 +3150,16 @@
       document.body.style.overflow = isOpen ? ''    : 'hidden';
     }
 
+
+    // ── Scroll To Top Button ─────────────────────────
+    const scrollTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     // ── FAQ Accordion ─────────────────────────────────
     function toggleFaq(btn) {
       const item   = btn.closest('.faq__item');
@@ -3274,5 +3327,10 @@
 
   </script>
 
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 </body>
 </html>
