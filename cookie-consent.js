@@ -24,7 +24,9 @@
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         analytics_storage: 'granted',
-        ad_storage: 'denied'
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
       });
     }
     setCookie(COOKIE_NAME, 'granted', COOKIE_DAYS);
@@ -34,7 +36,9 @@
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         analytics_storage: 'denied',
-        ad_storage: 'denied'
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
       });
     }
     setCookie(COOKIE_NAME, 'denied', COOKIE_DAYS);
