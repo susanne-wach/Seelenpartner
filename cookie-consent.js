@@ -24,10 +24,14 @@
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         analytics_storage: 'granted',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied'
+        ad_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted'
       });
+    }
+    // Meta Pixel aktivieren
+    if (typeof fbq === 'function') {
+      fbq('consent', 'grant');
     }
     setCookie(COOKIE_NAME, 'granted', COOKIE_DAYS);
   }
@@ -40,6 +44,10 @@
         ad_user_data: 'denied',
         ad_personalization: 'denied'
       });
+    }
+    // Meta Pixel deaktivieren
+    if (typeof fbq === 'function') {
+      fbq('consent', 'revoke');
     }
     setCookie(COOKIE_NAME, 'denied', COOKIE_DAYS);
   }
