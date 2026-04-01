@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="google-site-verification" content="GUk-uvQRBgssw5LKul9Fro-f4CN4cWFTbl88TLihbhM" />
+<link rel="canonical" href="https://susanne-wachter.at/herzerinnerung.html" />
+<!-- Google tag (gtag.js) — Consent Mode v2 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z10S9LVPFW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 2000
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-Z10S9LVPFW');
+</script>
+<!-- Meta Pixel — DSGVO: wird nur nach Cookie-Zustimmung via cookie-consent.js aktiviert -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('consent', 'revoke');
+  fbq('init', '626079095228912');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"
+/></noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HerzErinnerung | Susanne Wachter</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --dark: #3A2E3D;
+    --pink: #DD3089;
+    --pink-hover: #C42878;
+    --gold: #CFAC5E;
+    --gold-light: #F7DE7A;
+    --warm: #F9F5EE;
+    --soft-pink: #EAD1D7;
+    --soft-pink-bg: rgba(234,209,215,0.25);
+    --text: #4A3F4E;
+    --text-muted: #7E6B84;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--dark);
+    line-height: 1.25;
+  }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 400; margin-bottom: 20px; }
+  h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 300; margin-bottom: 20px; }
+  h3 { font-size: 1.3rem; font-weight: 500; margin-bottom: 10px; }
+
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 500; color: var(--dark); }
+
+  .sw-highlight {
+    display: inline-block;
+    background: linear-gradient(180deg, transparent 60%, rgba(207,172,94,0.3) 60%);
+    padding: 0 2px;
+  }
+
+  /* LAYOUT */
+  .sw-section { padding: 72px 24px; }
+  .sw-section--warm { background: var(--warm); }
+  .sw-section--dark { background: var(--dark); color: var(--white); }
+  .sw-section--pink { background: var(--soft-pink-bg); }
+  .sw-section--accent { background: var(--pink); color: var(--white); }
+  .sw-container { max-width: 720px; margin: 0 auto; }
+
+  .sw-section--dark h1,
+  .sw-section--dark h2,
+  .sw-section--dark h3 { color: var(--white); }
+  .sw-section--dark p { color: rgba(255,255,255,0.82); }
+  .sw-section--dark strong { color: var(--gold); }
+
+  .sw-section--accent h2 { color: var(--white); }
+  .sw-section--accent p { color: rgba(255,255,255,0.9); }
+
+  .sw-accent { color: var(--pink); }
+
+  /* HAMMERSATZ */
+  .sw-hammersatz {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark);
+    text-align: center;
+    padding: 48px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .sw-section--dark .sw-hammersatz { color: var(--gold); }
+
+  /* CTA BUTTON */
+  .sw-btn {
+    display: inline-block;
+    background: var(--pink);
+    color: #fff !important;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 60px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .sw-btn:hover {
+    background: var(--pink-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(221,48,137,0.25);
+  }
+  .sw-btn--white {
+    background: var(--white);
+    color: var(--pink) !important;
+    font-weight: 600;
+  }
+  .sw-btn--white:hover {
+    background: #f8f0f3;
+    color: var(--pink-hover) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  /* TWO COLUMN */
+  .sw-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .sw-two-col--reverse { direction: rtl; }
+  .sw-two-col--reverse > * { direction: ltr; }
+  .sw-img-placeholder {
+    background: rgba(207,172,94,0.1);
+    border-radius: 12px;
+    display: block;
+    overflow: hidden;
+    max-height: 460px;
+  }
+  .sw-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* HERO */
+  .sw-hero {
+    padding: 80px 24px 60px;
+    background: var(--dark);
+    color: var(--white);
+  }
+  .sw-hero__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .sw-hero__img {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    max-height: 420px;
+  }
+  .sw-hero__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .sw-hero__tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .sw-hero h1 {
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  .sw-hero__sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sw-hero__price {
+    font-family: 'Inter', sans-serif;
+    margin: 20px 0 24px;
+  }
+  .sw-hero__price-new {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  /* CHECKS */
+  .sw-checks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sw-checks li {
+    padding-left: 28px;
+    margin-bottom: 14px;
+    position: relative;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .sw-checks li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--pink);
+    font-weight: bold;
+  }
+  .sw-section--dark .sw-checks li { color: rgba(255,255,255,0.85); }
+  .sw-section--dark .sw-checks li::before { color: var(--gold); }
+
+  /* PAINPOINTS */
+  .sw-painpoints {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sw-painpoints li {
+    padding-left: 20px;
+    margin-bottom: 14px;
+    position: relative;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .sw-painpoints li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--pink);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  /* QUOTE */
+  .sw-quote {
+    font-style: italic;
+    color: var(--text-muted);
+    border-left: 4px solid var(--pink);
+    padding-left: 16px;
+    margin: 20px 0 0 0 !important;
+  }
+
+  /* PROOF STRIP */
+  .sw-proof-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .sw-proof-strip__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .sw-proof-strip__icon {
+    font-size: 1.4rem;
+    color: var(--pink);
+  }
+
+  /* MODULE CARDS */
+  .sw-modules {
+    display: grid;
+    gap: 24px;
+  }
+  .sw-module-card {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .sw-module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  }
+  .sw-module-card__thumb {
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 60px;
+  }
+  .sw-module-card__thumb--1 { background: var(--pink); }
+  .sw-module-card__thumb--2 { background: var(--gold); }
+  .sw-module-card__thumb--3 { background: var(--dark); }
+  .sw-module-card__body { padding: 24px; }
+  .sw-module-card__tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .sw-module-card__tag--1 { background: rgba(221,48,137,0.15); color: var(--pink); }
+  .sw-module-card__tag--2 { background: rgba(207,172,94,0.15); color: var(--gold); }
+  .sw-module-card__tag--3 { background: rgba(58,46,61,0.15); color: var(--dark); }
+
+  .sw-module-card__includes {
+    background: var(--warm);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+
+  .sw-module-card__result {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--pink);
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 12px;
+  }
+
+  /* PRICING */
+  .sw-price-wrap { text-align: center; }
+  .sw-price {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .sw-price__amount {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--pink);
+    margin-bottom: 4px;
+  }
+  .sw-price__label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .sw-price__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    text-align: left;
+  }
+  .sw-price__list li {
+    padding: 8px 0 8px 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 0.95rem;
+    color: var(--text);
+    position: relative;
+  }
+  .sw-price__list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .sw-price__list li:last-child { border-bottom: none; }
+
+  /* PFDF */
+  .sw-pfdf-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .sw-pfdf-item:last-child { border-bottom: none; }
+  .sw-pfdf-item strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .sw-pfdf-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* ABOUT */
+  .sw-about__name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  /* TESTIMONIALS */
+  .sw-testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .sw-testimonial-card {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .sw-testimonial-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .sw-testimonial-card p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .sw-testimonial-card__author {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* FAQ */
+  .sw-faq { display: grid; gap: 16px; }
+  .sw-faq__item {
+    background: var(--warm);
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid var(--pink);
+  }
+  .sw-faq__q {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0;
+  }
+  .sw-faq__a {
+    font-size: 0.95rem;
+    color: var(--text);
+    margin: 0;
+    padding-top: 12px;
+  }
+
+  /* CLOSING */
+  .sw-closing { text-align: center; }
+  .sw-closing h2 { color: var(--white); }
+  .sw-closing p { color: rgba(255,255,255,0.8); margin-bottom: 16px; }
+  .sw-sig {
+    margin-top: 32px;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+  }
+  .sw-ps {
+    background: rgba(255,255,255,0.08);
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-top: 32px;
+    border-left: 4px solid var(--gold);
+    text-align: left;
+  }
+  .sw-ps p { font-size: 0.95rem; margin: 0; }
+  .sw-ps strong { color: var(--gold); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .sw-section { padding: 52px 20px; }
+    .sw-price { padding: 32px 20px; }
+    .sw-hero__inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      text-align: center;
+    }
+    .sw-two-col {
+      grid-template-columns: 1fr;
+    }
+    .sw-two-col--reverse { direction: ltr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==========================================
+     1. HERO
+     ========================================== -->
+<section class="sw-hero">
+  <div class="sw-hero__inner">
+    <div>
+      <div class="sw-hero__tag">Minikurs &middot; Sofort verf&uuml;gbar</div>
+      <h1>Wenn sein R&uuml;ckzug dich jedes Mal aus der Bahn wirft &ndash; und du endlich <span class="sw-accent">ruhig bleiben</span> willst</h1>
+
+      <p class="sw-hero__sub">HerzErinnerung ist deine 5-Minuten-Soforthilfe, wenn sein R&uuml;ckzug dich triggert &ndash; damit du nicht in Panik ger&auml;tst, sondern bei dir bleibst. 3 Module. 2 gef&uuml;hrte Audios. 1 Meditation.</p>
+
+      <div class="sw-hero__price">
+        <span class="sw-hero__price-new">29 &euro;</span>
+        <span style="font-size:0.82rem; color:rgba(255,255,255,0.5);"> &middot; Einmalzahlung &middot; Kein Abo</span>
+      </div>
+
+      <a href="https://your-balance.thrivecart.com/herzerinnerung-checkout/" class="sw-btn">Ja, ich will meine Soforthilfe &ndash; f&uuml;r 29 &euro; &rarr;</a>
+    </div>
+    <div>
+      <div class="sw-hero__img"><img src="https://susanne-wachter.at/img/susanne-herz.webp" alt="Susanne Wachter &ndash; Hand auf dem Herzen, goldene Stunde"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     2. PROOF STRIP
+     ========================================== -->
+<section style="background:var(--soft-pink-bg); padding:16px 24px;">
+  <div class="sw-proof-strip">
+    <div class="sw-proof-strip__item"><span class="sw-proof-strip__icon">&hearts;</span><span>3 Video-Module</span></div>
+    <div class="sw-proof-strip__item"><span class="sw-proof-strip__icon">&hearts;</span><span>2 Audios + 1 Meditation</span></div>
+    <div class="sw-proof-strip__item"><span class="sw-proof-strip__icon">&hearts;</span><span>PDF-Workbook</span></div>
+    <div class="sw-proof-strip__item"><span class="sw-proof-strip__icon">&hearts;</span><span>Sofortiger Zugriff</span></div>
+  </div>
+</section>
+
+<!-- ==========================================
+     3. EMPATHIE / REGEN
+     ========================================== -->
+<section class="sw-section sw-section--warm">
+  <div class="sw-container" style="max-width:900px;">
+    <div class="sw-two-col">
+      <div class="sw-img-placeholder"><img src="https://susanne-wachter.at/img/susanne-herzhaende.jpg" alt="Susanne Wachter bildet ein Herz mit ihren H&auml;nden vor dem Sonnenuntergang am Meer"></div>
+      <div>
+    <h2>Du kennst diesen Moment.</h2>
+
+    <p>Er schreibt nicht zur&uuml;ck. Oder er zieht sich zur&uuml;ck. Ohne Erkl&auml;rung. Ohne Vorwarnung.</p>
+
+    <p>Und in dir passiert etwas, das du nicht steuern kannst.</p>
+
+    <p>Dein Magen zieht sich zusammen. Dein Herz schl&auml;gt schneller. Deine Gedanken drehen sich im Kreis &ndash; &bdquo;Was habe ich falsch gemacht?&ldquo; &bdquo;Geht er?&ldquo; &bdquo;Warum reicht es nicht?&ldquo;</p>
+
+    <p>Du versuchst ruhig zu bleiben. Aber dein K&ouml;rper macht, was er will. Die H&auml;nde zittern. Du scrollst durch alte Nachrichten. Du schreibst eine Nachricht &ndash; l&ouml;schst sie wieder. Schreibst nochmal.</p>
+
+    <p>Du wei&szlig;t, dass du so nicht reagieren willst. Aber du wei&szlig;t nicht, wie du in diesen Momenten bei dir bleiben sollst.</p>
+
+    <p>Du hast schon vieles probiert. Atmen. Ablenken. Journaling. Meditation. Aber wenn der Trigger kommt, ist alles weg. Als h&auml;tte dein K&ouml;rper einen eigenen Willen.</p>
+
+    <p>Das Frustrierende: Du bist eine kluge, reflektierte Frau. Du verstehst rational, was passiert. Aber dein Nervensystem reagiert schneller als dein Verstand.</p>
+
+    <p>Und danach? Danach kommt die Scham. Dass du &bdquo;schon wieder&ldquo; so reagiert hast. Dass du &bdquo;es besser wissen m&uuml;sstest&ldquo;.</p>
+
+    <p class="sw-quote">Du brauchst kein besseres Wissen. Du brauchst einen Anker, der h&auml;lt &ndash; auch wenn alles in dir tobt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     4. HAMMERSATZ
+     ========================================== -->
+<div class="sw-hammersatz">
+  Du musst dich nicht ver&auml;ndern. Du musst dich erinnern. Und dieser Kurs zeigt dir, wie du in genau diesen Momenten wieder Boden unter dir sp&uuml;rst.
+</div>
+
+<!-- ==========================================
+     5. FUTURE PACE
+     ========================================== -->
+<section class="sw-section sw-section--pink">
+  <div class="sw-container">
+    <h2 style="text-align:center;">Stell dir vor&hellip;</h2>
+
+    <p><strong>Sein Name erscheint auf deinem Display &ndash; und du merkst: Dein Atem bleibt ruhig.</strong></p>
+
+    <p><strong>Er zieht sich zur&uuml;ck &ndash; und statt Panik sp&uuml;rst du etwas Neues: Stille.</strong></p>
+
+    <p>Nicht die leere Stille, die wehtut. Sondern eine, die dich tr&auml;gt.</p>
+
+    <p>Du legst das Handy weg. Nicht, weil du dich zwingst. Sondern weil du sp&uuml;rst: Ich bin gerade bei mir. Ich bin sicher. Ich muss jetzt nichts tun.</p>
+
+    <p>Dein K&ouml;rper wird weicher. Deine Schultern sinken. Dein Kiefer l&ouml;st sich.</p>
+
+    <p>Du atmest. Und mit jedem Atemzug w&auml;chst dieses leise Wissen: <em>Was auch immer er tut &ndash; ich halte mich. Ich bin mein eigener Ruhepol.</em></p>
+
+    <p>Nicht irgendwann. Jetzt.</p>
+
+    <p class="sw-quote">Das ist kein Wunschdenken. Das ist das, was HerzErinnerung in dir aktiviert.</p>
+  </div>
+</section>
+
+<!-- ==========================================
+     CTA ZWISCHENSTOPP
+     ========================================== -->
+<section class="sw-section sw-section--accent" style="padding:48px 24px; text-align:center;">
+  <div class="sw-container">
+    <h2 style="color:var(--white); margin-bottom:16px;">Bereit, bei dir zu bleiben &ndash; auch wenn es tobt?</h2>
+    <a href="https://your-balance.thrivecart.com/herzerinnerung-checkout/" class="sw-btn sw-btn--white">Ja, ich starte jetzt &ndash; f&uuml;r 29 &euro; &rarr;</a>
+  </div>
+</section>
+
+<!-- ==========================================
+     6. WAS IST HERZERINNERUNG
+     ========================================== -->
+<section class="sw-section sw-section--warm">
+  <div class="sw-container">
+    <h2 style="text-align:center;">HerzErinnerung ist kein Kurs, den du m&uuml;hsam durcharbeitest. <br><em>Es ist ein Werkzeug, das du genau dann nutzt, wenn dein System kippt.</em></h2>
+
+    <p style="text-align:center; margin-top:20px;">Kein Wissen, das du dir merken musst. Keine Theorie, die du erst verstehen sollst.</p>
+    <p style="text-align:center;">Du dr&uuml;ckst auf Play, legst eine Hand auf dein Herz und l&auml;sst dich von meiner Stimme zur&uuml;ckf&uuml;hren. Zu deinem Atem. Zu deinem K&ouml;rper. Zu dir.</p>
+    <p style="text-align:center;"><strong>5 Minuten reichen. Manchmal auch nur 3.</strong></p>
+    <p style="text-align:center; font-style:italic; color:var(--text-muted);">Denn Regulation beginnt nicht im Kopf. Sondern in dem Moment, in dem du wieder atmest und deinen K&ouml;rper sp&uuml;rst.</p>
+  </div>
+</section>
+
+<!-- ==========================================
+     7. MODULE
+     ========================================== -->
+<section class="sw-section">
+  <div class="sw-container">
+    <h2 style="text-align:center;">3 Schritte zur&uuml;ck zu dir</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:32px;">Sanft, klar, sofort sp&uuml;rbar.</p>
+
+    <div class="sw-modules">
+
+      <div class="sw-module-card">
+        <div class="sw-module-card__thumb sw-module-card__thumb--1">Modul 1</div>
+        <div class="sw-module-card__body">
+          <h3>Wenn R&uuml;ckzug dich triggert</h3>
+          <p>Was passiert in dir, wenn N&auml;he zu viel wird oder er sich zur&uuml;ckzieht &ndash; und wie du in den ersten Sekunden wieder Boden findest. Ohne Analyse, ohne Kampf.</p>
+          <div class="sw-module-card__includes"><strong>Was du bekommst:</strong> Gef&uuml;hrte Video-Session + Journaling mit 3 Reflexionsfragen + 3 Ankers&auml;tze, die dein System sofort beruhigen</div>
+          <p class="sw-module-card__result">Du findest deinen Atem wieder &ndash; selbst wenn alles in dir rast.</p>
+        </div>
+      </div>
+
+      <div class="sw-module-card">
+        <div class="sw-module-card__thumb sw-module-card__thumb--2">Modul 2</div>
+        <div class="sw-module-card__body">
+          <h3>Zur&uuml;ck in deinen K&ouml;rper</h3>
+          <p>Mit Atem, Audio und K&ouml;rperankern raus aus der &Uuml;berflutung. Dein Nervensystem lernt, sich zu beruhigen &ndash; sanft, ohne Druck, ohne Leistung.</p>
+          <div class="sw-module-card__includes"><strong>Was du bekommst:</strong> Video-Session + Audio &bdquo;Ich halte mich&ldquo; (Nervensystem-Reset, ca. 5 Min.) + K&ouml;rperanker-&Uuml;bung + Affirmationsimpulse</div>
+          <p class="sw-module-card__result">Du sp&uuml;rst Sicherheit wieder dort, wo sie immer war &ndash; in dir. Nicht im Kopf. Im K&ouml;rper.</p>
+        </div>
+      </div>
+
+      <div class="sw-module-card">
+        <div class="sw-module-card__thumb sw-module-card__thumb--3">Modul 3</div>
+        <div class="sw-module-card__body">
+          <h3>Dein innerer Ruhepol</h3>
+          <p>Wie du bei dir bleibst, auch wenn im Au&szlig;en nichts klar ist. Mit einer gef&uuml;hrten Meditation zur&uuml;ck in deine Ruhe und einer Audio-Session, die dich in deinem Zentrum h&auml;lt.</p>
+          <div class="sw-module-card__includes"><strong>Was du bekommst:</strong> Video-Session + Meditation &bdquo;R&uuml;ckkehr in deine Ruhe&ldquo; + Audio &bdquo;Ruhe im Herzraum&ldquo; + Affirmationskarte + Journaling-&Uuml;bung</div>
+          <p class="sw-module-card__result">Du wirst zu deinem eigenen sicheren Ort &ndash; unabh&auml;ngig davon, was er tut oder l&auml;sst.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     8. PREIS / PAKET
+     ========================================== -->
+<section class="sw-section sw-section--warm">
+  <div class="sw-container sw-price-wrap">
+    <h2 style="text-align:center;">Einmalig 29 &euro;</h2>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:28px;">Alles, was du brauchst, um in akuten Momenten nicht mehr in dir zusammenzufallen.</p>
+
+    <div class="sw-price">
+      <ul class="sw-price__list">
+        <li><strong>3 gef&uuml;hrte Video-Module</strong> &ndash; kurz, klar, sofort sp&uuml;rbar</li>
+        <li><strong>2 Audios zum Anh&ouml;ren und Sp&uuml;ren</strong> &ndash; &bdquo;Ich halte mich&ldquo; (Nervensystem-Reset) + &bdquo;Ruhe im Herzraum&ldquo;</li>
+        <li><strong>1 gef&uuml;hrte Meditation</strong> &ndash; &bdquo;R&uuml;ckkehr in deine Ruhe&ldquo;</li>
+        <li><strong>Notfallkarte &amp; SOS-Flow</strong> &ndash; dein 5-Minuten-Rettungsanker f&uuml;r akute Trigger</li>
+      </ul>
+
+      <p style="font-size:0.82rem; color:var(--text-muted); margin:20px 0 8px; text-align:left; text-transform:uppercase; letter-spacing:2px; font-weight:600;">Au&szlig;erdem dabei:</p>
+      <ul class="sw-price__list">
+        <li>7-Tage-Praxisplan (Mini-Rituale, 10&ndash;15 Min./Tag)</li>
+        <li>Tracker &amp; F&uuml;rsorge-Men&uuml; (2- und 10-Minuten-Optionen)</li>
+        <li>Grenzen-Hygiene-Checkliste</li>
+        <li>Journaling-Impulse &amp; Affirmationskarten</li>
+        <li>Sofortiger Zugriff auf alle Materialien</li>
+      </ul>
+
+      <div class="sw-price__amount">29 &euro;</div>
+      <div class="sw-price__label">Einmalzahlung &middot; Kein Abo</div>
+
+      <a href="https://your-balance.thrivecart.com/herzerinnerung-checkout/" class="sw-btn" style="width:100%; display:block;">Ja, ich starte jetzt &ndash; f&uuml;r 29 &euro; &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     9. PERFEKT F&Uuml;R DICH FALLS
+     ========================================== -->
+<section class="sw-section">
+  <div class="sw-container">
+    <h2 style="text-align:center;">HerzErinnerung ist f&uuml;r dich, wenn&hellip;</h2>
+
+    <ul class="sw-checks" style="margin-top:28px;">
+      <li><strong>du dich in Verbindungen immer wieder selbst verlierst</strong> &ndash; und merkst, wie du dich nach ihm richtest, statt bei dir zu bleiben.</li>
+      <li><strong>dich ein Trigger in Sekunden aus deiner Mitte rei&szlig;t</strong> &ndash; und du in Panik oder &Uuml;berflutung steckst, ohne zu wissen, wie du dich halten kannst.</li>
+      <li><strong>du dich nach Ruhe und innerer Sicherheit sehnst</strong> &ndash; nach etwas in dir, das bleibt, egal ob er schreibt, schweigt oder sich zur&uuml;ckzieht.</li>
+      <li><strong>du aufh&ouml;ren willst zu fliehen, zu klammern oder zu k&auml;mpfen</strong> &ndash; und stattdessen lernen m&ouml;chtest, in emotionalen Momenten bei dir zu bleiben.</li>
+      <li><strong>du gerade keinen Kontakt zu ihm hast</strong> &ndash; und trotzdem merkst, wie Sehnsucht oder Angst dein System &uuml;berfluten. Dieser Kurs dreht sich nicht um ihn. Er dreht sich um dich.</li>
+    </ul>
+
+    <p style="text-align:center; margin-top:28px; font-style:italic; color:var(--text-muted);">Du brauchst kein Vorwissen. Nur die Bereitschaft, zu atmen, zu f&uuml;hlen &ndash; und Schritt f&uuml;r Schritt zu dir zur&uuml;ckzukehren.</p>
+  </div>
+</section>
+
+<!-- ==========================================
+     10. &Uuml;BER SUSANNE
+     ========================================== -->
+<section class="sw-section sw-section--warm">
+  <div class="sw-container" style="max-width:900px;">
+    <div class="sw-two-col">
+      <div class="sw-img-placeholder"><img src="https://susanne-wachter.at/img/susanne-hero.png" alt="Susanne Wachter &ndash; Energetikerin &amp; Seelenpartner-Begleiterin"></div>
+      <div>
+    <div class="sw-about__name">Susanne Wachter</div>
+    <h2>&Uuml;ber mich &ndash; und warum ich diesen Raum geschaffen habe</h2>
+
+    <p>Ich begleite Frauen, die f&uuml;hlen, bevor sie verstehen. Frauen, die tief lieben &ndash; und sich in dieser Tiefe manchmal selbst verlieren.</p>
+
+    <p>Mein Weg begann nicht mit Wissen. Er begann mit einer Frage: Warum f&uuml;hlt es sich so an, als w&auml;re ich verloren, sobald sich jemand zur&uuml;ckzieht?</p>
+
+    <p>Aus dieser Suche ist meine Arbeit entstanden &ndash; eine Verbindung aus emotionaler Bewusstseinsarbeit, energetischem Verst&auml;ndnis und Nervensystem-Regulation.</p>
+
+    <p>Ich kenne die Dynamik von R&uuml;ckzug, Funkstille und N&auml;he-Distanz. Ich kenne das Herzrasen, die Enge, die &Uuml;berflutung. Und ich wei&szlig;, wie schnell du dich darin verlieren kannst, wenn du keinen Anker in dir hast.</p>
+
+    <p>Genau deshalb ist HerzErinnerung entstanden: Ein Raum, der dich nicht &uuml;berfordert &ndash; sondern dich sanft zur&uuml;ck in dich tr&auml;gt. Selbst dann, wenn im Au&szlig;en gar nichts stabil ist.</p>
+
+    <p>In meiner Arbeit geht es nicht darum, &bdquo;ihn&ldquo; zu verstehen. Sondern dich selbst wieder zu f&uuml;hlen. Mit Ruhe. Mit Tiefe. Mit Wahrheit.</p>
+
+    <p style="margin-top:24px; font-style:italic; color:var(--pink);">&ndash; Susanne Wachter<br><span style="font-style:normal; font-size:0.82rem; color:var(--text-muted);">Herzmentorin &amp; Begleiterin f&uuml;r emotionale Regulation &middot; your-balance.at</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     11. TESTIMONIALS
+     ========================================== -->
+<section class="sw-section sw-section--pink">
+  <div class="sw-container">
+    <h2 style="text-align:center;">Was Frauen &uuml;ber <span class="sw-accent">HerzErinnerung</span> sagen</h2>
+
+    <div class="sw-testimonials" style="margin-top:28px;">
+      <div class="sw-testimonial-card">
+        <h3>&bdquo;Er hat 2 Tage nicht geschrieben &ndash; und ich bin nicht in Panik geraten.&ldquo;</h3>
+        <p>Fr&uuml;her h&auml;tte ich nach 3 Stunden Funkstille schon die erste Nachricht geschickt. Diesmal habe ich das Audio angeh&ouml;rt, geatmet &ndash; und das Handy weggelegt. Einfach so. Ich konnte es selbst kaum glauben.</p>
+        <div class="sw-testimonial-card__author">&ndash; Claudia, 39</div>
+      </div>
+
+      <div class="sw-testimonial-card">
+        <h3>&bdquo;Ich habe ihm nicht sofort geschrieben. Zum ersten Mal.&ldquo;</h3>
+        <p>Er hat sich zur&uuml;ckgezogen und statt alles stehen und liegen zu lassen, habe ich die Notfallkarte genommen und bin bei mir geblieben. Danach f&uuml;hlte ich mich stabiler als seit Monaten. Und das Sch&ouml;nste: Ich musste nichts mehr beweisen.</p>
+        <div class="sw-testimonial-card__author">&ndash; Julia, 42</div>
+      </div>
+
+      <div class="sw-testimonial-card">
+        <h3>&bdquo;Zum ersten Mal war Ruhe keine Leere &ndash; sondern Frieden.&ldquo;</h3>
+        <p>In einem Moment, in dem sonst Panik kam, konnte ich einfach still werden. Ich habe das Handy bewusst in die Schublade gelegt. Und zum ersten Mal f&uuml;hlte sich diese Stille nicht nach Verlust an, sondern nach Zuhause.</p>
+        <div class="sw-testimonial-card__author">&ndash; Verena, 36</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     12. FAQ
+     ========================================== -->
+<section class="sw-section">
+  <div class="sw-container">
+    <h2 style="text-align:center;">H&auml;ufige Fragen</h2>
+
+    <div class="sw-faq" style="margin-top:28px;">
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Wie l&auml;uft der Kurs ab?</div>
+        <div class="sw-faq__a">Du erh&auml;ltst sofort nach dem Kauf Zugriff auf alle Module, Audios und PDFs. Alles ist f&uuml;r dich da &ndash; in deinem Tempo, ohne Druck, ohne Zeitlimit. Du kannst die Materialien so oft nutzen, wie du m&ouml;chtest.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Wie viel Zeit brauche ich t&auml;glich?</div>
+        <div class="sw-faq__a">5 bis 15 Minuten reichen. Die Video-Sessions und Audios sind bewusst kurz gehalten &ndash; f&uuml;r akute Momente genauso wie f&uuml;r sanfte Alltagsrituale. Du entscheidest, was dich gerade ruft.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Ich bin gerade sehr emotional &ndash; ist der Kurs trotzdem f&uuml;r mich?</div>
+        <div class="sw-faq__a">Ja. Gerade dann. HerzErinnerung beruhigt dein Nervensystem, statt es zu &uuml;berfordern. Die Sessions sind sanft, k&ouml;rpernah und brauchen keine Kraft. Du musst nichts verstehen. Nur atmen und sp&uuml;ren.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Was, wenn ich wieder getriggert werde?</div>
+        <div class="sw-faq__a">Daf&uuml;r ist dieser Raum da. Trigger sind kein R&uuml;ckschritt &ndash; sie zeigen dir, wo du dich halten darfst. Die Notfallkarte und der SOS-Flow sind genau f&uuml;r diese Momente gemacht.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Was nutze ich im akuten Trigger-Moment zuerst?</div>
+        <div class="sw-faq__a">Die Notfallkarte und den SOS-Flow. Die sind genau daf&uuml;r gemacht: Du nimmst sie in die Hand, folgst den Schritten &ndash; und sp&uuml;rst, wie dein K&ouml;rper sich in Minuten beruhigt. Kein Nachdenken n&ouml;tig.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Muss ich die Module der Reihe nach machen?</div>
+        <div class="sw-faq__a">Nein. Du kannst die Module in beliebiger Reihenfolge nutzen. Modul 1 ist ein guter Einstieg, aber wenn du gerade eine akute Situation hast, kannst du auch direkt mit Modul 2 oder den Audios starten.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Kann ich mitmachen, wenn ich keinen Kontakt zu ihm habe?</div>
+        <div class="sw-faq__a">Absolut. Der Kurs dreht sich nicht um ihn. Er dreht sich um dich. Um deine Ruhe, deine Klarheit, deine innere Stabilit&auml;t &ndash; unabh&auml;ngig davon, was er tut oder nicht tut.</div>
+      </div>
+      <div class="sw-faq__item">
+        <div class="sw-faq__q">Brauche ich Meditations- oder Vorerfahrung?</div>
+        <div class="sw-faq__a">Nein, &uuml;berhaupt nicht. Alles ist gef&uuml;hrt &ndash; du musst nichts wissen, nichts k&ouml;nnen. Du dr&uuml;ckst auf Play und l&auml;sst dich von meiner Stimme leiten. Das reicht.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     13. FINALER CTA
+     ========================================== -->
+<section class="sw-section sw-section--dark sw-closing">
+  <div class="sw-container">
+    <h2>Es gibt einen Ort in dir, der nie gegangen ist.</h2>
+    <p>Er wartet nicht auf den richtigen Moment. Nicht auf seine Nachricht. Nicht auf eine Antwort.</p>
+    <p>Er ist jetzt da. In deinem Atem. In deinem Herzschlag. In der Stille, die unter dem Sturm liegt.</p>
+    <p style="color:var(--white);">Wenn du nicht l&auml;nger von jeder Nachricht, Funkstille oder Unsicherheit aus deiner Mitte gerissen werden willst &ndash; dann ist HerzErinnerung dein erster Schritt zur&uuml;ck zu dir.</p>
+    <p style="color:var(--gold); font-weight:600; font-size:1.2rem; margin-top:16px;">29 &euro; &middot; Einmalzahlung &middot; Sofortiger Zugriff</p>
+
+    <a href="https://your-balance.thrivecart.com/herzerinnerung-checkout/" class="sw-btn" style="margin-top:24px;">Ich beginne meine HerzErinnerung &rarr;</a>
+
+    <div class="sw-sig">&ndash; Susanne</div>
+
+    <div class="sw-ps">
+      <p><strong>P.S.</strong> Du willst tiefer gehen? In &bdquo;Warum zieht er sich zur&uuml;ck?&ldquo; erf&auml;hrst du, was energetisch zwischen euch passiert, wenn einer sich distanziert &ndash; und wie du dich dabei in deiner Mitte h&auml;ltst. Den Link findest du nach dem Kauf in deinem Kursbereich.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>
