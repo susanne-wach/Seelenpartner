@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://susanne-wachter.at/sitemap.xml

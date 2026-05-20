@@ -1,90 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Hauptseite -->
+  <!-- ═══ HAUPTSEITE (Priority 1.0) ═══ -->
   <url>
     <loc>https://susanne-wachter.at/</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Kurse -->
+  <!-- ═══ MONEY-PAGES (Priority 0.9) ═══ -->
+  <url>
+    <loc>https://susanne-wachter.at/herzerinnerung.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://susanne-wachter.at/21-tage-meditationsreise.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://susanne-wachter.at/kurse.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Blog Übersicht -->
+  <!-- ═══ BLOG-HUB (Priority 0.8) ═══ -->
   <url>
     <loc>https://susanne-wachter.at/blog.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog-Artikel -->
+  <!-- ═══ BLOG-ARTIKEL (Priority 0.7) ═══ -->
   <url>
     <loc>https://susanne-wachter.at/blog/was-ist-seelenpartnerschaft.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/5-muster-seelenverbindungen.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/rueckzug-beim-mann.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/seelenpartnerschaft-oder-bindungsangst.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/selbstliebe-seelenpartnerschaften.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/staerker-als-dich-selbst.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/warum-du-ihn-spuerst.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/warum-sein-schweigen.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://susanne-wachter.at/blog/was-dein-koerper-dir-sagt.html</loc>
-    <lastmod>2026-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
