@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Du bist angemeldet · Your Balance</title>
+<link rel="icon" type="image/png" href="assets/images/favicon-neu.png">
+<link rel="apple-touch-icon" href="assets/images/favicon-neu.png">
+
+<!-- GA4 mit Lead-Event beim Page-Load -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+  gtag('event', 'generate_lead', { currency: 'EUR', value: 0, source: 'freebie_seelenpartner_rueckzug' });
+</script>
+
+<!-- META PIXEL mit Lead + CompleteRegistration beim Page-Load -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '626079095228912');
+  fbq('track', 'PageView');
+  fbq('track', 'Lead');
+  /* CompleteRegistration feuert erst nach der DOI-Bestätigung (danke-seelenpartner-training.html) */
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=Lead&noscript=1"/>
+</noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --burgundy-deep: #2D0A1F;
+    --burgundy-medium: #5B2A4A;
+    --burgundy-dark: #1F0514;
+    --gold: #CFAC5E;
+    --gold-light: #E5C383;
+    --gold-dark: #B89243;
+    --cream: #FBF5EC;
+    --roseWarm: #E8A5B8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background:
+      radial-gradient(ellipse at top, rgba(207,172,94,0.08) 0%, transparent 50%),
+      linear-gradient(160deg, var(--burgundy-deep) 0%, var(--burgundy-medium) 60%, var(--burgundy-dark) 100%);
+    color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .gold-shine {
+    background: linear-gradient(180deg, #F7E9B8 0%, #E5C383 25%, #CFAC5E 50%, #B89243 70%, #8B6914 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(207,172,94,0.3));
+  }
+  .container {
+    max-width: 580px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .logo {
+    height: 56px;
+    width: auto;
+    margin: 0 auto 40px;
+    display: block;
+    opacity: 0.9;
+  }
+  .checkmark-wrap {
+    width: 88px; height: 88px;
+    margin: 0 auto 28px;
+    background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05));
+    border: 2px solid rgba(16,185,129,0.4);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 32px rgba(16,185,129,0.15);
+    animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+  }
+  @keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  .checkmark {
+    font-size: 40px;
+    color: #10B981;
+    font-weight: 600;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--cream);
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 500;
+  }
+  .lead-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.4vw, 22px);
+    font-style: italic;
+    color: var(--roseWarm);
+    margin-bottom: 36px;
+    line-height: 1.55;
+  }
+  .gold-divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 28px auto;
+  }
+  .info-box {
+    background: rgba(207,172,94,0.06);
+    border: 1px solid rgba(207,172,94,0.2);
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin: 32px 0;
+    text-align: left;
+    backdrop-filter: blur(10px);
+  }
+  .info-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 22px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  .info-box ol {
+    list-style: none;
+    counter-reset: step;
+  }
+  .info-box li {
+    padding: 14px 0 14px 52px;
+    position: relative;
+    font-size: 15px;
+    color: rgba(251,245,236,0.88);
+    line-height: 1.65;
+  }
+  .info-box li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 11px;
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--burgundy-deep);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(207,172,94,0.3);
+  }
+  .spam-note {
+    background: rgba(232,165,184,0.06);
+    border-left: 3px solid var(--roseWarm);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 22px;
+    margin: 28px 0 0;
+    text-align: left;
+    font-size: 13px;
+    color: rgba(251,245,236,0.75);
+    line-height: 1.65;
+  }
+  .spam-note strong {
+    color: var(--roseWarm);
+    font-weight: 600;
+  }
+  .spam-note a {
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(207,172,94,0.3);
+  }
+  .signature {
+    margin-top: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--roseWarm);
+    line-height: 1.5;
+  }
+  .signature strong {
+    display: block;
+    font-style: normal;
+    font-size: 19px;
+    color: var(--cream);
+    font-weight: 600;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+  .yb-tag {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .footer-mini {
+    margin-top: 48px;
+    font-size: 11px;
+    color: rgba(251,245,236,0.35);
+    letter-spacing: 0.3px;
+  }
+  .footer-mini a {
+    color: rgba(232,165,184,0.6);
+    text-decoration: none;
+  }
+  @media (max-width: 500px) {
+    body { padding: 24px 16px; }
+    .info-box { padding: 24px 20px; }
+    .info-box li { padding: 12px 0 12px 48px; font-size: 14px; }
+    .spam-note { padding: 16px 18px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+  <main class="container">
+    <img src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance — Susanne Wachter" class="logo">
+
+    <div class="checkmark-wrap">
+      <span class="checkmark">✓</span>
+    </div>
+
+    <h1>Wunderbar — <em class="gold-shine">du bist dabei!</em></h1>
+
+    <p class="lead-text">Dein Premium-Training wartet schon auf dich.</p>
+
+    <div class="gold-divider"></div>
+
+    <div class="info-box">
+      <h3>So geht es weiter</h3>
+      <ol>
+        <li>Schau jetzt in dein E-Mail-Postfach.</li>
+        <li>Klick auf den Bestätigungslink in der Mail von mir.</li>
+        <li>Dein Training öffnet sich direkt — sofort und kostenlos.</li>
+      </ol>
+
+      <div class="spam-note">
+        💡 <strong>Keine Mail erhalten?</strong><br>
+        Schau bitte im Spam-Ordner oder bei „Werbung" (Gmail). Manchmal landet sie dort.<br>
+        Falls trotzdem nichts ankommt, schreib mir an <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a>.
+      </div>
+    </div>
+
+    <div class="signature">
+      Ich freue mich, dass du da bist.
+      <strong>Susanne</strong>
+      <span class="yb-tag">Your Balance</span>
+    </div>
+
+    <p class="footer-mini">
+      © 2026 Your Balance · Susanne Wachter · <a href="https://www.your-balance.at">your-balance.at</a>
+    </p>
+  </main>
+
+</body>
+</html>
